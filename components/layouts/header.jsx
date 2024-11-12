@@ -9,7 +9,7 @@ import Burger from "../UI/burger/burger";
 import { useState } from "react";
 import MyModal from "../UI/modal/modal";
 import Form from "../UI/forms/form";
-import MobNav from "./MobNav";
+import MobNav from "./mobNav";
 
 const Header = () => {
     const [isNavOpen, setIsNavOpen] = useState(false);
@@ -42,7 +42,11 @@ const Header = () => {
             <MyModal isOpen={isOpen} toggleOpen={toggleOpen}>
                 <Form onSuccess={handleSuccess} />
             </MyModal>
-            <MobNav isOpen={isNavOpen} closeMenu={closeNav} toggleOpen={toggleOpen}/>
+            <MobNav
+                isOpen={isNavOpen}
+                closeMenu={closeNav}
+                toggleOpen={toggleOpen}
+            />
         </header>
     );
 };
