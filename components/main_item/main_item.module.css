@@ -1,0 +1,72 @@
+/* Добавляем стили для карточек внутри контейнера */
+.figure {
+    flex: 1 1 300px; /* Карточки будут занимать минимум 300px и растягиваться */
+    max-width: 400px; /* Максимальная ширина */
+    aspect-ratio: 4 / 3; /* Пропорции 4:3 */
+    padding: 0.5rem;
+    position: relative;
+    border-radius: 0.5rem;
+    transition: all 0.3s;
+    background-color: var(--primary-3);
+    text-align: justify;
+    overflow: hidden;
+}
+
+.figure::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #171717bb;
+    z-index: 2;
+    border-radius: 0.5rem;
+}
+
+.figure:hover .img {
+    transform: scale(1.2); /* Увеличение изображения на 5% */
+    transition: transform 1s ease; /* Плавный переход */
+}
+
+.img {
+    /* width: 100%;
+    height: 100%; */
+    object-fit: cover;
+    border-radius: 0.5rem;
+    z-index: 1;
+}
+
+.figcaption {
+    position: absolute;
+    width: 90%;
+    text-align: center;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: var(--primary-1);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.5rem;
+    z-index: 3;
+}
+
+.figcaption h2 {
+    font-size: 1.5rem;
+    font-weight: 500;
+    letter-spacing: 3px;
+}
+
+/* Глобальные стили внутри локального класса */
+.highlight :global(.google-ads) {
+    /* color: #4285f4;  */
+    font-weight: bold;
+    letter-spacing: 1px;
+}
+
+.highlight :global(.yandex-direct) {
+    /* color: #ffcc00;  */
+    font-weight: bold;
+    letter-spacing: 1px;
+}

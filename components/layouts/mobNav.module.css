@@ -1,0 +1,82 @@
+.mnavigation {
+    display: none;
+}
+
+.mobnav_toprow {
+    display: flex;
+    flex-direction: row;
+    gap: 0.5rem;
+    padding-top: 1.5rem;
+}
+
+@media (max-width: 989px) {
+    /* Полупрозрачный фон */
+    .nav_overlay {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: var(--secondary-0);
+        display: none;
+        z-index: 2;
+        transition: opacity 0.3s ease-in-out;
+        overflow: hidden;
+    }
+
+    .nav_overlay.open {
+        display: block;
+        opacity: 1;
+    }
+
+    /* Навигационное меню */
+    .mnavigation {
+        position: fixed;
+        top: 0;
+        right: -100%;
+        width: 80%;
+        height: 100%;
+        background-color: var(--primary-2);
+        color: var(--primary-1);
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: center;
+        z-index: 3;
+        overflow-y: auto; /* Полоса прокрутки */
+        transition: right 0.4s ease-in-out;
+        padding-top: 28px;
+        padding-bottom: 3rem;
+        font-size: 1.2rem;
+        letter-spacing: 1px;
+    }
+
+    .mnavigation.open {
+        right: 0;
+    }
+
+    .mnavigation ul {
+        width: 100%;
+        padding: 0 1rem;
+        display: flex;
+        flex-direction: column;
+        list-style-type: none;
+    }
+
+    .mnavigation ul li {
+        padding: 0.5rem 0;
+        width: 100%;
+        text-align: left;
+        border-bottom: 1px solid var(--primary-3);
+    }
+
+    .mnavigation ul li ul {
+        position: static;
+        display: none;
+        padding-left: 1rem;
+    }
+
+    .mnavigation ul li:hover > ul {
+        display: block;
+    }
+}

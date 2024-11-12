@@ -1,0 +1,92 @@
+.main {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    justify-content: flex-start;
+    align-items: center;
+    width: 100%;
+}
+
+/* Для адаптивности добавляем максимальную ширину */
+.figure {
+    flex: 1 1 auto;
+    width: 100%;
+    max-width: 800px; /* Максимальная ширина карточки */
+    aspect-ratio: 9 / 6; /* Пропорции 4:3 */
+    position: relative;
+    border-radius: 0.5rem;
+    transition: all 0.3s;
+    background-color: var(--primary-3);
+    text-align: justify;
+    overflow: hidden;
+}
+
+.figure:hover .img {
+    transform: scale(1.05); /* Увеличение изображения при наведении */
+    transition: transform 1s ease;
+}
+
+.img {
+    object-fit: cover; /* Изображение сохраняет свои пропорции */
+    width: 100%;
+    height: 100%;
+    border-radius: 0.5rem;
+}
+
+/* Адаптивность текста */
+.figcaption {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    padding: 1rem;
+    color: #ffffff;
+    background: rgba(0, 0, 0, 0.5);
+    border-radius: 0 0 0.5rem 0.5rem;
+    z-index: 1;
+}
+
+.title {
+    font-size: 1.5rem;
+}
+
+.desc {
+    font-size: 1rem;
+    line-height: 1.5;
+    text-indent: 1rem;
+    text-align: justify;
+}
+
+.price_wrapper {
+    display: flex;
+    gap: 0.5rem;
+}
+.price {
+    color: var(--secondary-1);
+    font-weight: bolder;
+    letter-spacing: 1px;
+}
+
+.old_price {
+    color: var(--primary-3);
+    text-decoration: line-through;
+}
+
+.button_wrapper {
+    width: 100%;
+    bottom: 0;
+    background-color: var(--primary-1);
+    display: flex;
+    justify-content: space-between;
+    border-top: 1px solid var(--primary-3);
+    gap: 1rem;
+    padding: 1rem;
+}
+
+/* Адаптивность для карточки и текста */
+@media (max-width: 768px) {
+    .figure {
+        max-width: 100%; /* На маленьких экранах карточка занимает всю ширину */
+        aspect-ratio: 4 / 3;
+    }
+}

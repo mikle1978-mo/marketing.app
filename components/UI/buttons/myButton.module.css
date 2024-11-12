@@ -1,0 +1,27 @@
+.button {
+    width: 100%;
+    max-width: 180px;
+    padding: calc(0.5rem) calc(1rem);
+    background-color: var(--primary-1);
+    color: var(--primary-3);
+    border-radius: 2rem;
+    font-size: 1rem;
+    font-weight: 600;
+    font-family: "Times New Roman", Times, serif;
+    letter-spacing: 0.1rem;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    align-self: center;
+    transition: all 0.3s ease-in;
+    text-transform: uppercase;
+}
+
+.button:hover {
+    transform: scale(1.01);
+    filter: drop-shadow(0px 0px 5px var(--primary-1));
+}
+.button:disabled {
+    border: 1px solid var(--primary-2);
+    background-color: var(--primary-2);
+    color: var(--primary-1);
+}
