@@ -7,7 +7,7 @@
     position: relative;
     border-radius: 0.5rem;
     transition: all 0.3s;
-    background-color: var(--primary-3);
+    background-color: var(--background);
     text-align: justify;
     overflow: hidden;
 }
@@ -19,9 +19,8 @@
     left: 0;
     width: 100%;
     height: 100%;
-    background-color: #171717bb;
+    background-color: var(--opacity-5);
     z-index: 2;
-    border-radius: 0.5rem;
 }
 
 .figure:hover .img {
@@ -44,7 +43,7 @@
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    color: var(--primary-1);
+    color: var(--foreground);
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -56,17 +55,4 @@
     font-size: 1.5rem;
     font-weight: 500;
     letter-spacing: 3px;
-}
-
-/* Глобальные стили внутри локального класса */
-.highlight :global(.google-ads) {
-    /* color: #4285f4;  */
-    font-weight: bold;
-    letter-spacing: 1px;
-}
-
-.highlight :global(.yandex-direct) {
-    /* color: #ffcc00;  */
-    font-weight: bold;
-    letter-spacing: 1px;
 }

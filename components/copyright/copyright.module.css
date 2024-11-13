@@ -1,6 +1,12 @@
 .copyright {
     align-self: center;
-    color: var(--primary-1);
+    color: var(--background);
     padding: 1rem;
     font-size: 0.9rem;
+}
+
+@media (prefers-color-scheme: dark) {
+    .copyright {
+        color: var(--foreground);
+    }
 }

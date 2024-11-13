@@ -10,6 +10,7 @@ import { useState } from "react";
 import MyModal from "../UI/modal/modal";
 import Form from "../UI/forms/form";
 import MobNav from "./mobNav";
+import Logo from "./logo";
 
 const Header = () => {
     const [isNavOpen, setIsNavOpen] = useState(false);
@@ -23,16 +24,7 @@ const Header = () => {
     return (
         <header className={cl.header}>
             <div className={cl.line}>
-                <Link className={cl.logo} href='/'>
-                    <Image
-                        className={cl.logo_img}
-                        src='/logo.png'
-                        alt='Marketing Stark logo'
-                        width={96}
-                        height={96}
-                    />
-                    <span>Marketing Stark</span>
-                </Link>
+                <Logo />
                 <div className={cl.contacts}>
                     <Social />
                     <MyButton onClick={toggleOpen}>Заказать</MyButton>

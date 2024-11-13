@@ -4,7 +4,7 @@
     height: 4px;
     width: 30px;
     top: 13px;
-    background-color: var(--primary-1);
+    background-color: var(--background);
     border-radius: 20px;
     position: absolute;
     transition-duration: 0.3s;
@@ -16,7 +16,7 @@
     top: -9px;
     height: 4px;
     width: 30px;
-    background-color: var(--primary-1);
+    background-color: var(--background);
     content: "";
     border-radius: 20px;
     transition-duration: 0.3s;
@@ -27,7 +27,7 @@
     top: 9px;
     height: 4px;
     width: 30px;
-    background-color: var(--primary-1);
+    background-color: var(--background);
     content: "";
     border-radius: 20px;
     transition-duration: 0.3s;
@@ -76,5 +76,17 @@
 @media (max-width: 570px) {
     .menu {
         display: inline-block;
+    }
+}
+
+@media (prefers-color-scheme: dark) {
+    .icon {
+        background-color: var(--foreground);
+    }
+    .icon:before {
+        background-color: var(--foreground);
+    }
+    .icon:after {
+        background-color: var(--foreground);
     }
 }

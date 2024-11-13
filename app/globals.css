@@ -1,14 +1,14 @@
 :root {
-    --primary-0: #ff0000;
-    --primary-1: #ffffff;
-    --primary-2: #333333;
-    --primary-3: #717174;
+    --foreground: #fbf9fb;
+    --background: #33363a;
 
-    --secondary-0: #71717496;
-    --secondary-1: #21da2a;
+    --primary-0: #a1a9b0;
+    --primary-1: #6c6a61;
 
-    --text-shadow: 0px 0px 0.1rem var(--primary-0),
-        0px 0px 0.3rem var(--primary-0), 0px 0px 0.6rem var(--primary-0);
+    --opacity-5: #33363ac0;
+
+    --text-shadow: 0px 0px 0.1rem var(--foreground),
+        0px 0px 0.3rem var(--foreground), 0px 0px 0.6rem var(--foreground);
 }
 
 html,
@@ -32,8 +32,8 @@ body {
 }
 
 body {
-    color: var(--foreground);
-    background: var(--background);
+    color: var(--background);
+    background: var(--foreground);
     font-family: "Times New Roman", Times, serif;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
@@ -64,20 +64,58 @@ a {
     html {
         color-scheme: dark;
     }
+    body {
+        color: var(--foreground);
+        background: var(--background);
+    }
 }
 
 .container {
     padding: 0 1rem;
-    margin-top: 86px;
+    margin-top: 70px;
 }
 
 @media (max-width: 900px) {
     .container {
-        margin-top: 80px;
+        margin-top: 65px;
     }
 }
 @media (max-width: 570px) {
     .container {
-        margin-top: 75px;
+        margin-top: 60px;
+    }
+}
+
+/* Стили для таблиц */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    background: var(--foreground);
+    color: var(--background);
+}
+
+th,
+td {
+    padding: 0.5rem;
+    border: 1px solid var(--primary-2);
+    text-align: left;
+    color: var(--background); /* Контрастный цвет текста */
+}
+
+/* Дополнительный стиль для темной темы */
+@media (prefers-color-scheme: dark) {
+    :root {
+        --text-shadow: 0px 0px 0.1rem var(--background),
+            0px 0px 0.3rem var(--background), 0px 0px 0.6rem var(--background);
+    }
+    table {
+        background: var(--background);
+        color: var(--foreground);
+    }
+
+    th,
+    td {
+        color: var(--foreground); /* Контрастный цвет текста */
+        border-color: var(--primary-3); /* Цвет границы для темной темы */
     }
 }

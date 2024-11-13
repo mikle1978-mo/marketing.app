@@ -1,11 +1,5 @@
-.description .stages:nth-child(2n) {
-    background-color: var(--secondary-0);
-    color: var(--primary-1);
-}
-
 .stages {
     text-align: justify;
-    padding: 0.5rem;
 }
 .stages h2 {
     text-align: center;

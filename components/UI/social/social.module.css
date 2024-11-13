@@ -6,7 +6,7 @@
 }
 
 .icons {
-    color: var(--primary-1);
+    color: var(--background);
     width: 2rem;
     height: 2rem;
     transition: all 0.3s ease-in;
@@ -14,7 +14,7 @@
 
 .icons:hover {
     transform: scale(1.05);
-    filter: drop-shadow(0px 0px 5px var(--primary-1));
+    filter: drop-shadow(0px 0px 5px var(--background));
 }
 
 .link__wrapper {
@@ -26,5 +26,15 @@
 .link {
     padding: 0.5rem;
     margin: 0;
-    color: var(--primary-1);
+    color: var(--background);
+}
+
+@media (prefers-color-scheme: dark) {
+    .icons {
+        color: var(--foreground);
+    }
+
+    .icons:hover {
+        filter: drop-shadow(0px 0px 5px var(--foreground));
+    }
 }

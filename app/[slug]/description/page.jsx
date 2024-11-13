@@ -5,7 +5,7 @@ export default function Description({ params }) {
     const item = ServicesList.find((item) => item.slug == params.slug);
 
     return (
-        <>
+        <main cl>
             <h1>{item.name} </h1>
             <div className={cl.description}>
                 {item.stages.map((i, index) => (
@@ -15,6 +15,6 @@ export default function Description({ params }) {
                     </div>
                 ))}
             </div>
-        </>
+        </main>
     );
 }

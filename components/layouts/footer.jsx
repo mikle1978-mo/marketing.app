@@ -2,11 +2,10 @@
 
 import cl from "./footer.module.css";
 import Link from "next/link";
-import Image from "next/image";
-
 import Social from "@/components/UI/social/social";
 import Copyright from "../copyright/copyright";
 import { ServicesList } from "@/lib/services";
+import Logo from "./logo";
 
 export default function Footer() {
     const yandexServices = ServicesList.filter((service) =>
@@ -25,16 +24,7 @@ export default function Footer() {
     return (
         <footer className={cl.footer}>
             <div className={cl.line}>
-                <Link className={cl.logo} href='/'>
-                    <Image
-                        className={cl.logo_img}
-                        src='/logo.png'
-                        alt='Marketing Stark logo'
-                        width={96}
-                        height={96}
-                    />
-                    <span>Marketing Stark</span>
-                </Link>
+                <Logo />
                 <div className={cl.contacts}>
                     <Social />
                 </div>

@@ -24,7 +24,7 @@ export default function PriceList() {
                 </thead>
                 <tbody>
                     {ServicesList.map((item) => (
-                        <tr key={item._id} className={cl.table_row}>
+                        <tr key={item.id} className={cl.table_row}>
                             <td className={cl.item_name}>
                                 <Link
                                     href={`/${item.slug}`}

@@ -1,0 +1,41 @@
+.logo {
+    position: relative;
+    display: flex;
+    align-items: center;
+    column-gap: 0.5rem;
+    color: var(--background);
+    font-size: 2rem;
+    transition: all 0.3s ease-in;
+}
+.logo:hover {
+    transform: scale(1.005);
+    filter: drop-shadow(0px 0px 5px var(--background));
+}
+
+.logo_img {
+    width: 2.5rem;
+    height: 2.5rem;
+    text-transform: uppercase;
+    border-radius: 50%;
+    border: 2px solid var(--background);
+    text-align: center;
+    font-weight: bolder;
+}
+
+@media (max-width: 570px) {
+    .logo_title {
+        display: none;
+    }
+}
+
+@media (prefers-color-scheme: dark) {
+    .logo {
+        color: var(--foreground);
+    }
+    .logo_img {
+        border: 2px solid var(--foreground);
+    }
+    .logo:hover {
+        filter: drop-shadow(0px 0px 5px var(--foreground));
+    }
+}

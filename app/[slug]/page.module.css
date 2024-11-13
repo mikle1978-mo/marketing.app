@@ -5,6 +5,7 @@
     justify-content: flex-start;
     align-items: center;
     width: 100%;
+    padding: 1rem 0;
 }
 
 /* Для адаптивности добавляем максимальную ширину */
@@ -75,12 +76,10 @@
 .button_wrapper {
     width: 100%;
     bottom: 0;
-    background-color: var(--primary-1);
+    background-color: var(--foreground);
     display: flex;
     justify-content: space-between;
-    border-top: 1px solid var(--primary-3);
     gap: 1rem;
-    padding: 1rem;
 }
 
 /* Адаптивность для карточки и текста */
@@ -88,5 +87,11 @@
     .figure {
         max-width: 100%; /* На маленьких экранах карточка занимает всю ширину */
         aspect-ratio: 4 / 3;
+    }
+}
+
+@media (prefers-color-scheme: dark) {
+    .button_wrapper {
+        background-color: var(--background);
     }
 }
