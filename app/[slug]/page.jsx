@@ -37,12 +37,12 @@ export default function ServicePage({ params }) {
                 </figcaption>
             </figure>
             <div className={cl.price_wrapper}>
-                Стоимость услуги от:
+                Стоимость услуги: от
                 <span className={cl.price}> {item.price}</span>
                 <span className={cl.old_price}>{item.old_price} </span>
             </div>
             <div className={cl.period_wrapper}>
-                Срок выполнения от: {item.period} рабочих дней
+                Срок выполнения: от {item.period} рабочих дней
             </div>
             <div className={cl.desc_wrapper}>
                 {item.desc.map((i, index) => (
