@@ -9,11 +9,11 @@ export function middleware(request) {
     // Добавляем заголовок Referrer-Policy для защиты данных реферера
     response.headers.set("Referrer-Policy", "strict-origin-when-cross-origin");
 
-    // Минимальная Content-Security-Policy, разрешающая только ресурсы с того же домена
+    // Обновленная Content-Security-Policy с разрешением инлайновых скриптов через 'unsafe-inline'
     response.headers.set(
         "Content-Security-Policy",
         `default-src 'self'; 
-        script-src 'self'; 
+        script-src 'self' 'unsafe-inline'; 
         style-src 'self'; 
         img-src 'self'; 
         font-src 'self';`
