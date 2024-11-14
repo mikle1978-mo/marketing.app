@@ -10,10 +10,10 @@ export function middleware(request) {
     response.headers.set("Referrer-Policy", "strict-origin-when-cross-origin");
 
     // Обновленная Content-Security-Policy с разрешением всех скриптов
-    response.headers.set(
-        "Content-Security-Policy",
-        "default-src *; script-src *; style-src *;"
-    );
+    // response.headers.set(
+    //     "Content-Security-Policy",
+    //     "default-src *; script-src *; style-src *;"
+    // );
 
     // Добавляем заголовок X-Content-Type-Options для защиты от sniffing атак
     response.headers.set("X-Content-Type-Options", "nosniff");
