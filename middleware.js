@@ -12,11 +12,7 @@ export function middleware(request) {
     // Обновленная Content-Security-Policy с разрешением инлайновых скриптов через 'unsafe-inline'
     response.headers.set(
         "Content-Security-Policy",
-        `default-src 'self'; 
-        script-src 'self' 'unsafe-inline'; 
-        style-src 'self'; 
-        img-src 'self'; 
-        font-src 'self';`
+        "default-src 'self'; script-src 'self'; style-src 'self';"
     );
 
     // Добавляем заголовок X-Content-Type-Options для защиты от sniffing атак
