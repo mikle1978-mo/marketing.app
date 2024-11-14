@@ -1,5 +1,16 @@
 import cl from "./page.module.css";
 
+export const metadata = {
+    metadataBase: new URL(process.env.API_URL),
+    title: "Политика работы с персональными данными - MarketingSratk",
+
+    description:
+        "Политика работы с персональными данными пользователей- MarketingSratk",
+    alternates: {
+        canonical: `${process.env.API_URL}/privacy`,
+    },
+};
+
 export default function Privacy() {
     return (
         <div className={cl.privacy}>

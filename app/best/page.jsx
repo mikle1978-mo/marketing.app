@@ -1,5 +1,15 @@
 import cl from "./page.module.css";
 
+export const metadata = {
+    metadataBase: new URL(process.env.API_URL),
+    title: "Наши преимущества - MarketingSratk",
+
+    description: "Почему стоит заказать у MarketingSratk",
+    alternates: {
+        canonical: `${process.env.API_URL}/best`,
+    },
+};
+
 export default function WeAreTheBest() {
     return (
         <div className={cl.best}>

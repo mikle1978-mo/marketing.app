@@ -2,6 +2,16 @@ import { ServicesList } from "@/lib/services";
 import cl from "./page.module.css";
 import Link from "next/link";
 
+export const metadata = {
+    metadataBase: new URL(process.env.API_URL),
+    title: "Цены на услуги - MarketingSratk",
+
+    description: "Цены на услуги, оказываемые MarketingSratk",
+    alternates: {
+        canonical: `${process.env.API_URL}/price_list`,
+    },
+};
+
 export default function PriceList() {
     return (
         <>
