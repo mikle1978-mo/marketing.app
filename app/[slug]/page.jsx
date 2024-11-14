@@ -1,67 +1,46 @@
-"use client";
-
-import { ServicesList } from "@/lib/services";
-import Image from "next/image";
+import ServiceItem from "@/components/servise_item/servise_item";
 import cl from "./page.module.css";
-import MyButton from "@/components/UI/buttons/myButton";
-import { useRouter } from "next/navigation";
-import MyModal from "@/components/UI/modal/modal";
-import Form from "@/components/UI/forms/form";
-import { useState } from "react";
+import { ServicesList } from "@/lib/services";
+
+export async function generateMetadata({ params }) {
+    try {
+        const item = ServicesList.find((item) => item.slug == params.slug);
+
+        if (!item) {
+            return {
+                title: "Реклама в интернете, контекстная реклама",
+                description:
+                    "Настройка рекламы в Yandex Direct, Google Ads, Яндекс Директ, Гугл Адс. Настройка контекстной рекламы. Ведение, оптимизация, аудит рекламных кампаний. CEO, СЕО оптимизация, разработка продающих лендингов, сайтов и сайтов для интернет магазинов",
+            };
+        }
+
+        return {
+            metadataBase: new URL(process.env.API_URL),
+            title: item.name,
+            description: item.desc,
+            keywords: item?.keywords,
+            openGraph: {
+                images: item.img || ["/images/default_item.png"], // Добавьте изображение категории, если оно есть
+            },
+            alternates: {
+                canonical: `${process.env.API_URL}/${item.slug}`,
+            },
+        };
+    } catch (error) {
+        console.error("Ошибка при получении категории:", error.message);
+        return {
+            title: "Реклама в интернете, контекстная реклама",
+            description:
+                "Настройка рекламы в Yandex Direct, Google Ads, Яндекс Директ, Гугл Адс. Настройка контекстной рекламы. Ведение, оптимизация, аудит рекламных кампаний. CEO, СЕО оптимизация, разработка продающих лендингов, сайтов и сайтов для интернет магазинов",
+        };
+    }
+}
 
 export default function ServicePage({ params }) {
-    const router = useRouter();
-    const [isOpen, setIsOpen] = useState(false);
-    const toggleOpen = () => setIsOpen(!isOpen);
-    const handleSuccess = () => {
-        setIsOpen(false);
-    };
     const item = ServicesList.find((item) => item.slug == params.slug);
-
     return (
         <main className={cl.main}>
-            <figure className={cl.figure}>
-                <Image
-                    src={item.img}
-                    alt={item.name}
-                    className={cl.img}
-                    fill
-                    sizes='(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw'
-                    priority
-                />
-                <figcaption className={cl.figcaption}>
-                    <h1 className={`${cl.title} ${cl.highlight}`}>
-                        {item.name}
-                    </h1>
-                    <div className={cl.desc}>{item.title}</div>
-                </figcaption>
-            </figure>
-            <div className={cl.price_wrapper}>
-                Стоимость услуги: от
-                <span className={cl.price}> {item.price}</span>
-                <span className={cl.old_price}>{item.old_price} </span>
-            </div>
-            <div className={cl.period_wrapper}>
-                Срок выполнения: от {item.period} рабочих дней
-            </div>
-            <div className={cl.desc_wrapper}>
-                {item.desc.map((i, index) => (
-                    <div className={cl.desc} key={index}>
-                        <p>{i}</p>
-                    </div>
-                ))}
-            </div>
-            <div className={cl.button_wrapper}>
-                <MyButton
-                    onClick={() => router.push(`${item.slug}/description`)}
-                >
-                    Подробнее
-                </MyButton>
-                <MyButton onClick={toggleOpen}>Заказать</MyButton>
-            </div>
-            <MyModal isOpen={isOpen} toggleOpen={toggleOpen}>
-                <Form onSuccess={handleSuccess} />
-            </MyModal>
+            <ServiceItem item={item} />
         </main>
     );
 }
