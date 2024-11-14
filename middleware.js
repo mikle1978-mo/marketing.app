@@ -12,7 +12,7 @@ export function middleware(request) {
     // Обновленная Content-Security-Policy с разрешением всех скриптов
     response.headers.set(
         "Content-Security-Policy",
-        "default-src 'self'; script-src *; style-src 'self';"
+        "default-src *; script-src *; style-src *;"
     );
 
     // Добавляем заголовок X-Content-Type-Options для защиты от sniffing атак
