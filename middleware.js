@@ -14,6 +14,8 @@ export function middleware(request) {
         "Content-Security-Policy",
         "default-src 'self'; script-src 'self'; style-src 'self';"
     );
+    // Добавляем заголовок X-Content-Type-Options для защиты от sniffing атак
+    response.headers.set("X-Content-Type-Options", "nosniff");
 
     return response;
 }
