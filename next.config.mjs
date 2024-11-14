@@ -1,7 +1,7 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
     env: {
-        API_URL: process.env.API_URL || "https://marketingstark.app/",
+        API_URL: process.env.API_URL || "https://marketingstark.app",
         FIRM_NAME: process.env.FIRM_NAME || "Marketing Stark",
         FIRM_EMAIL: process.env.FIRM_EMAIL || "Marketing Stark@yandex.ru",
         CHAT_ID: process.env.CHAT_ID || "-1001910999829",
