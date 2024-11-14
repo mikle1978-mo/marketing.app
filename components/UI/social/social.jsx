@@ -15,35 +15,27 @@ export default function Social() {
     return (
         <>
             <div className={cl.icons_line}>
-                <a href='tel:+905356062642' target='_blank' className={cl.link}>
+                <a href='tel:+905356062642' className={cl.link}>
                     <FontAwesomeIcon
                         className={cl.icons}
                         icon={faSquarePhoneFlip}
                     />
                 </a>
-                <a
-                    href='https://wa.me/905356062642'
-                    target='_blank'
-                    className={cl.link}
-                >
+                <a href='https://wa.me/905356062642' className={cl.link}>
                     <FontAwesomeIcon className={cl.icons} icon={faWhatsapp} />
                 </a>
                 {/* <a
                         href='mailto:moygromov19@gmail.com?subject=Important-mail:&body=Hello.'
                         type='email'
                         className={cl.link}
-                        target='_blank'
+                        
                     >
                         <FontAwesomeIcon
                             className={cl.icons}
                             icon={faSquareEnvelope}
                         />
                     </a> */}
-                <a
-                    href='https://t.me/+905356062642'
-                    target='_blank'
-                    className={cl.link}
-                >
+                <a href='https://t.me/+905356062642' className={cl.link}>
                     <FontAwesomeIcon className={cl.icons} icon={faTelegram} />
                 </a>
             </div>
