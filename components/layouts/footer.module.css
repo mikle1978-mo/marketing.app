@@ -23,7 +23,6 @@
 .bottom_line {
     display: flex;
     flex-wrap: wrap;
-    gap: 0.5rem;
     justify-content: space-evenly;
     padding: 0.5rem 0;
 }
@@ -31,7 +30,7 @@
 .bottom_item {
     flex: 1 1 300px; /* Карточки будут занимать минимум 300px и растягиваться */
     max-width: 400px; /* Максимальная ширина */
-    padding: 1rem;
+    padding: 0.5rem 1rem;
     position: relative;
     border-radius: 0.5rem;
     transition: all 0.3s;

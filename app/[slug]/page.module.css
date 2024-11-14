@@ -63,7 +63,7 @@
     gap: 0.5rem;
 }
 .price {
-    color: var(--secondary-1);
+    color: var(--secondary-0);
     font-weight: bolder;
     letter-spacing: 1px;
 }
