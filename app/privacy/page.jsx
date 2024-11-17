@@ -2,10 +2,10 @@ import cl from "./page.module.css";
 
 export const metadata = {
     metadataBase: new URL(process.env.API_URL),
-    title: "Политика работы с персональными данными - MarketingSratk",
+    title: "Политика работы с персональными данными - MarketingStark",
 
     description:
-        "Политика работы с персональными данными пользователей- MarketingSratk",
+        "Политика работы с персональными данными пользователей- MarketingStark",
     alternates: {
         canonical: `${process.env.API_URL}/privacy`,
     },

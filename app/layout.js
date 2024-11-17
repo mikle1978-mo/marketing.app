@@ -18,7 +18,7 @@ export const metadata = {
     metadataBase: new URL(process.env.API_URL),
     title: {
         default: "Реклама в интернете, контекстная реклама",
-        template: "%s - MarketingSratk",
+        template: "%s - MarketingStark",
     },
     description:
         "Настройка рекламы в Yandex Direct, Google Ads, Яндекс Директ, Гугл Адс. Настройка контекстной рекламы. Ведение, оптимизация, аудит рекламных кампаний. CEO, СЕО оптимизация, разработка продающих лендингов, сайтов и сайтов для интернет магазинов",

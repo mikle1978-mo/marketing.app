@@ -2,9 +2,9 @@ import cl from "./page.module.css";
 
 export const metadata = {
     metadataBase: new URL(process.env.API_URL),
-    title: "Наши преимущества - MarketingSratk",
+    title: "Наши преимущества - MarketingStark",
 
-    description: "Почему стоит заказать у MarketingSratk",
+    description: "Почему стоит заказать у MarketingStark",
     alternates: {
         canonical: `${process.env.API_URL}/best`,
     },

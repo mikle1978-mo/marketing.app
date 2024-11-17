@@ -4,9 +4,9 @@ import Link from "next/link";
 
 export const metadata = {
     metadataBase: new URL(process.env.API_URL),
-    title: "Цены на услуги - MarketingSratk",
+    title: "Цены на услуги - MarketingStark",
 
-    description: "Цены на услуги, оказываемые MarketingSratk",
+    description: "Цены на услуги, оказываемые MarketingStark",
     alternates: {
         canonical: `${process.env.API_URL}/price_list`,
     },
