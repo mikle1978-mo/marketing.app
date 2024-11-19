@@ -6,7 +6,13 @@ import MyButton from "@/components/UI/buttons/myButton";
 import { useRouter } from "next/navigation";
 import MyModal from "@/components/UI/modal/modal";
 import Form from "@/components/UI/forms/form";
-import { useState } from "react";
+import { useState, useEffect } from "react";
+
+function decodeHtmlEntities(str) {
+    const textarea = document.createElement("textarea");
+    textarea.innerHTML = str;
+    return textarea.value;
+}
 
 export default function ServiceItem({ item }) {
     const router = useRouter();
@@ -15,6 +21,14 @@ export default function ServiceItem({ item }) {
     const handleSuccess = () => {
         setIsOpen(false);
     };
+
+    const [decodedDesc, setDecodedDesc] = useState("");
+
+    useEffect(() => {
+        if (item && item.desc) {
+            setDecodedDesc(decodeHtmlEntities(item.desc)); // Декодируем описание
+        }
+    }, [item]);
 
     return (
         <>
@@ -44,9 +58,11 @@ export default function ServiceItem({ item }) {
             </div>
             <div className={cl.desc_wrapper}>
                 {item.desc.map((i, index) => (
-                    <div className={cl.desc} key={index}>
-                        <p>{i}</p>
-                    </div>
+                    <div
+                        className={cl.desc}
+                        key={index}
+                        dangerouslySetInnerHTML={{ __html: i }}
+                    />
                 ))}
             </div>
             <div className={cl.button_wrapper}>

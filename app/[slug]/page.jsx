@@ -17,7 +17,7 @@ export async function generateMetadata({ params }) {
         return {
             metadataBase: new URL(process.env.API_URL),
             title: item.name,
-            description: item.desc,
+            description: item.meta_desc,
             keywords: item?.keywords,
             openGraph: {
                 images: item.img || ["/images/default_item.png"], // Добавьте изображение категории, если оно есть
