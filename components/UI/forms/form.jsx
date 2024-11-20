@@ -17,7 +17,7 @@ export default function Form({ onSuccess }) {
 
         const data = {
             phone: formData.get("phone"),
-            name: formData.get("name"),
+            // name: formData.get("name"),
             message: formData.get("message"),
         };
 
@@ -32,9 +32,9 @@ export default function Form({ onSuccess }) {
             <form className={cl.form} ref={formRef} onSubmit={handleSubmit}>
                 <span className={cl.form_title}>Заказать обратный звонок</span>
                 <div className={cl.input_wrapper}>
-                    <div className={cl.input_field}>
+                    {/* <div className={cl.input_field}>
                         <input name='name' placeholder='Ваше имя' required />
-                    </div>
+                    </div> */}
                     <div className={cl.input_field}>
                         <input
                             name='phone'
@@ -47,7 +47,7 @@ export default function Form({ onSuccess }) {
                 <div className={cl.textarea_wrapper}>
                     <textarea
                         name='message'
-                        placeholder='Ваше сообщение (не обязательно)'
+                        placeholder='(не обязательно) любое сообщение, например адрес рекламируемого ресурса'
                         rows='4'
                     />
                 </div>
