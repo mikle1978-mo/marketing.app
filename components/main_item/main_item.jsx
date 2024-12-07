@@ -10,17 +10,20 @@ export default function Main_item({ item }) {
             className={cl.figure}
             onClick={() => router.push(`/${item.slug}`)}
         >
-            <Image
-                src={item.img}
-                alt={item.name}
-                className={cl.img}
-                fill
-                sizes='(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw'
-                priority
-            />
+            <div className={cl.img_wrapper}>
+                <Image
+                    src={item.img}
+                    alt={item.title}
+                    className={cl.img}
+                    fill
+                    sizes='(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw'
+                    priority
+                />
+            </div>
+
             <figcaption className={cl.figcaption}>
-                <h2 className={`${cl.title} ${cl.highlight}`}>{item.name}</h2>
-                <div className={cl.desc}>{item.title}</div>
+                <h2 className={`${cl.title} ${cl.highlight}`}>{item.title}</h2>
+                {/* <div className={cl.desc}>{item.title}</div> */}
             </figcaption>
         </figure>
     );

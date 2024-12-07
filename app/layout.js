@@ -3,17 +3,6 @@ import "./globals.css";
 import Header from "@/components/layouts/header";
 import Footer from "@/components/layouts/footer";
 
-const geistSans = localFont({
-    src: "./fonts/GeistVF.woff",
-    variable: "--font-geist-sans",
-    weight: "100 900",
-});
-const geistMono = localFont({
-    src: "./fonts/GeistMonoVF.woff",
-    variable: "--font-geist-mono",
-    weight: "100 900",
-});
-
 export const metadata = {
     metadataBase: new URL(process.env.API_URL),
     title: {
@@ -113,7 +102,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
                 />
                 {/* End Google Tag Manager */}
             </head>
-            <body className={`${geistSans.variable} ${geistMono.variable}`}>
+            <body>
                 {/* Google Tag Manager (noscript) */}
                 <noscript>
                     <iframe

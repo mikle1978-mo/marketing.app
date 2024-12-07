@@ -2,42 +2,67 @@
     width: 100%;
     max-width: 180px;
     padding: 0.5rem 1rem;
-    background-color: var(--background);
-    color: var(--foreground);
+    background-color: var(--primary);
     border: none;
     border-radius: 2rem;
     font-size: 1rem;
-    font-weight: 600;
-    font-family: "Times New Roman", Times, serif;
-    letter-spacing: 0.1rem;
     cursor: pointer;
     transition: background-color 0.3s;
     align-self: center;
     transition: all 0.3s ease-in;
-    text-transform: uppercase;
+    animation: y 2s linear infinite;
 }
 
 .button:hover {
     transform: scale(1.01);
-    filter: drop-shadow(0px 0px 5px var(--background));
+    filter: drop-shadow(0px 0px 5px var(--secondary-2));
 }
-/* .button:disabled {
-    border: 1px solid var(--primary-2);
-    background-color: var(--primary-2);
-    color: var(--primary-1);
-} */
 
 @media (prefers-color-scheme: dark) {
     .button {
-        background-color: var(--foreground);
-        color: var(--background);
+        background-color: var(--secondary-2);
+
+        animation: x 2s linear infinite;
     }
 
     .button:hover {
+        animation: none;
+    }
+}
+
+@keyframes x {
+    0% {
+        filter: drop-shadow(0px 0px 1px var(--foreground));
+    }
+
+    25% {
+        filter: drop-shadow(0px 0px 3px var(--foreground));
+    }
+    50% {
         filter: drop-shadow(0px 0px 5px var(--foreground));
     }
-    /* .button:disabled {
-        background-color: var(--background);
-        color: var(--foreground);
-    } */
+    75% {
+        filter: drop-shadow(0px 0px 3px var(--foreground));
+    }
+    100% {
+        filter: drop-shadow(0px 0px 1px var(--foreground));
+    }
+}
+@keyframes y {
+    0% {
+        filter: drop-shadow(0px 0px 1px var(--backround));
+    }
+
+    25% {
+        filter: drop-shadow(0px 0px 3px var(--background));
+    }
+    50% {
+        filter: drop-shadow(0px 0px 5px var(--background));
+    }
+    75% {
+        filter: drop-shadow(0px 0px 3px var(--background));
+    }
+    100% {
+        filter: drop-shadow(0px 0px 1px var(--background));
+    }
 }

@@ -1,0 +1,76 @@
+.scroll {
+    position: relative;
+    overflow: hidden;
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    background-color: var(--foreground);
+    z-index: 3;
+    padding: 0.5rem 0;
+}
+.scroll::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    overflow: hidden;
+    width: 5%;
+    height: 100%;
+    z-index: 3;
+    background: linear-gradient(
+        90deg,
+        rgb(255, 255, 255),
+        rgba(255, 255, 255, 0)
+    );
+}
+.scroll::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    overflow: hidden;
+    width: 3%;
+    height: 100%;
+    z-index: 3;
+    background: linear-gradient(
+        90deg,
+        rgba(255, 255, 255, 0),
+        rgba(255, 255, 255, 1)
+    );
+}
+
+.scroll div {
+    display: flex;
+    flex-shrink: 0; /* Это предотвратит сжатие блока */
+    animation: scroll 30s linear infinite;
+}
+
+.scroll div span {
+    display: inline-flex;
+    padding: 5px 10px;
+    border-radius: 5px;
+    /* word-spacing: 10px; */
+    text-transform: uppercase;
+    color: var(--color);
+    white-space: nowrap;
+    margin-right: 20px; /* Отступ между блоками */
+}
+
+/* Секрет для бесконечной прокрутки */
+@keyframes scroll {
+    0% {
+        transform: translateX(0);
+    }
+    25% {
+        transform: translateX(-50%);
+    }
+    50% {
+        transform: translateX(-100%);
+    }
+    75% {
+        transform: translateX(-50%);
+    }
+    100% {
+        transform: translateX(0%);
+    }
+}

@@ -13,18 +13,17 @@ import cl from "./social.module.css";
 
 export default function Social() {
     return (
-        <>
-            <div className={cl.icons_line}>
-                <a href='tel:+905356062642' className={cl.link}>
-                    <FontAwesomeIcon
-                        className={cl.icons}
-                        icon={faSquarePhoneFlip}
-                    />
-                </a>
-                <a href='https://wa.me/905356062642' className={cl.link}>
-                    <FontAwesomeIcon className={cl.icons} icon={faWhatsapp} />
-                </a>
-                {/* <a
+        <div className={cl.icons_line}>
+            <a href='tel:+905356062642' className={cl.link}>
+                <FontAwesomeIcon
+                    className={cl.icons}
+                    icon={faSquarePhoneFlip}
+                />
+            </a>
+            <a href='https://wa.me/905356062642' className={cl.link}>
+                <FontAwesomeIcon className={cl.icons} icon={faWhatsapp} />
+            </a>
+            {/* <a
                         href='mailto:moygromov19@gmail.com?subject=Important-mail:&body=Hello.'
                         type='email'
                         className={cl.link}
@@ -35,10 +34,9 @@ export default function Social() {
                             icon={faSquareEnvelope}
                         />
                     </a> */}
-                <a href='https://t.me/+905356062642' className={cl.link}>
-                    <FontAwesomeIcon className={cl.icons} icon={faTelegram} />
-                </a>
-            </div>
-        </>
+            <a href='https://t.me/+905356062642' className={cl.link}>
+                <FontAwesomeIcon className={cl.icons} icon={faTelegram} />
+            </a>
+        </div>
     );
 }

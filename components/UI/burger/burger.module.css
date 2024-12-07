@@ -73,7 +73,7 @@
     transform: rotateZ(45deg);
 }
 
-@media (max-width: 570px) {
+@media (max-width: 710px) {
     .menu {
         display: inline-block;
     }

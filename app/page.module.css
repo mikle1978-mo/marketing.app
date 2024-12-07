@@ -3,7 +3,16 @@
 }
 
 .main h1 {
-    font-size: 0.1px;
     margin: 0;
     padding: 0;
+}
+.main p {
+    text-align: center;
+    margin: 0;
+    padding: 0;
+    padding: 0.5rem;
+}
+
+.title {
+    padding: 0.5rem 0;
 }

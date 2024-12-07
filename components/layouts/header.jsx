@@ -1,8 +1,6 @@
 "use client";
 
-import Link from "next/link";
 import cl from "./header.module.css";
-import Image from "next/image";
 import Social from "../UI/social/social";
 import MyButton from "../UI/buttons/myButton";
 import Burger from "../UI/burger/burger";
@@ -32,7 +30,11 @@ const Header = () => {
                 <Burger toggleNav={toggleNav} isNavOpen={isNavOpen} />
             </div>
             <MyModal isOpen={isOpen} toggleOpen={toggleOpen}>
-                <Form onSuccess={handleSuccess} />
+                <Form
+                    onSuccess={handleSuccess}
+                    title={"Заказать обратный звонок"}
+                    button={"Отправить"}
+                />
             </MyModal>
             <MobNav
                 isOpen={isNavOpen}

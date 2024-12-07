@@ -3,7 +3,7 @@
     display: flex;
     align-items: center;
     column-gap: 0.5rem;
-    color: var(--background);
+
     font-size: 2rem;
     transition: all 0.3s ease-in;
 }
@@ -29,9 +29,6 @@
 }
 
 @media (prefers-color-scheme: dark) {
-    .logo {
-        color: var(--foreground);
-    }
     .logo_img {
         border: 2px solid var(--foreground);
     }

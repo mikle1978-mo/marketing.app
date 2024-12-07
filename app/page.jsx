@@ -5,18 +5,13 @@ export default function Home() {
     return (
         <>
             <main className={cl.main}>
-                <div style={{ visibility: "hidden" }}>
-                    <h1 className='hiddenTitle'>
-                        Контекстная реклама в Турции
-                    </h1>
-                    <p className='hiddenTitle'>
-                        - всё, что нужно для качественной рекламы в Турции
-                    </p>
+                <div className={cl.title}>
+                    <h1>Контекстная реклама в Турции</h1>
+                    <p>- всё, что нужно для качественной рекламы в Турции</p>
                 </div>
 
                 <MainList />
             </main>
-           
         </>
     );
 }

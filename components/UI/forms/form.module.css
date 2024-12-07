@@ -3,22 +3,24 @@
     display: flex;
     flex-direction: column;
     align-items: center;
+    justify-content: space-between;
     padding: 1rem;
     max-width: 600px;
+    max-height: 350px;
+    width: 100%;
     margin: 0 auto;
     gap: 1rem;
     background-color: var(--foreground);
     border-radius: 12px;
-    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+    box-shadow: var(--boxshadow);
     height: auto;
 }
 
 /* Заголовок формы */
 .form_title {
-    font-size: 1.8rem;
+    font-size: 1rem;
     font-weight: bold;
     text-align: center;
-    color: var(--primary-2);
 }
 
 /* Обертка для инпутов */
@@ -42,9 +44,8 @@
     border: 1px solid #ddd;
     border-radius: 8px;
     font-size: 16px;
-    color: #333;
     background-color: #fff;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+    box-shadow: var(--boxshadow);
     transition: border-color 0.3s, box-shadow 0.3s;
 }
 
@@ -52,7 +53,7 @@
 .input_field input:focus,
 .textarea_wrapper textarea:focus {
     border-color: var(--primary-3);
-    box-shadow: 0 0 8px rgba(255, 0, 0, 0.2);
+    box-shadow: var(--boxshadow);
     outline: none;
 }
 
@@ -74,10 +75,8 @@
     margin-top: 1rem;
 }
 
-/* Placeholder стиль */
-.input_field input::placeholder,
-.textarea_wrapper textarea::placeholder {
-    color: var(--background);
+.hidden_field {
+    display: none;
 }
 
 /* Медиазапросы */
@@ -95,24 +94,19 @@
     .form {
         background-color: var(--background);
     }
-    .input_field input::placeholder,
-    .textarea_wrapper textarea::placeholder {
-        color: var(--background);
-    }
 
     .input_field input:focus,
     .textarea_wrapper textarea:focus {
         border-color: var(--primary-2);
-        box-shadow: 0 0 8px rgba(255, 0, 0, 0.2);
+        box-shadow: var(--boxshadow);
         outline: none;
     }
     .input_field input,
     .textarea_wrapper textarea {
         border: 1px solid #ddd;
 
-        color: #333;
         background-color: #fff;
-        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+        box-shadow: var(--boxshadow);
         transition: border-color 0.3s, box-shadow 0.3s;
     }
 }

@@ -6,9 +6,8 @@
 }
 
 .icons {
-    color: var(--background);
-    width: 2rem;
-    height: 2rem;
+    width: 1.6rem;
+    height: 1.6rem;
     transition: all 0.3s ease-in;
 }
 
@@ -17,23 +16,14 @@
     filter: drop-shadow(0px 0px 5px var(--background));
 }
 
-.link__wrapper {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-}
-
 .link {
-    padding: 0.5rem;
+    padding: 0.4rem;
     margin: 0;
-    color: var(--background);
+    display: flex;
+    align-items: center;
 }
 
 @media (prefers-color-scheme: dark) {
-    .icons {
-        color: var(--foreground);
-    }
-
     .icons:hover {
         filter: drop-shadow(0px 0px 5px var(--foreground));
     }

@@ -31,7 +31,7 @@ export default function MobNav({ isOpen, closeMenu, toggleOpen }) {
                     {ServicesList.map((item) => (
                         <li key={item.id}>
                             <Link onClick={closeMenu} href={`/${item.slug}`}>
-                                {item.name}
+                                {item.title}
                             </Link>
                         </li>
                     ))}

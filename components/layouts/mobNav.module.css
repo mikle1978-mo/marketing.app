@@ -37,7 +37,6 @@
         width: 80%;
         height: 100%;
         background-color: var(--foreground);
-        color: var(--background);
         display: flex;
         flex-direction: column;
         justify-content: flex-start;
@@ -45,11 +44,10 @@
         z-index: 3;
         overflow-y: auto; /* Полоса прокрутки */
         transition: right 0.4s ease-in-out;
-        padding-top: 28px;
+        padding-top: 1rem;
         padding-bottom: 3rem;
-        font-size: 1.2rem;
-        letter-spacing: 1px;
-        box-shadow: 0 0 5px 2px var(--background);
+        font-size: 1rem;
+        box-shadow: var(--boxshadow);
     }
 
     .mnavigation.open {
@@ -88,8 +86,8 @@
     }
     .mnavigation {
         background-color: var(--background);
-        color: var(--foreground);
-        box-shadow: 0 0 5px 2px var(--foreground);
+
+        box-shadow: var(--boxshadow);
     }
     .mnavigation ul li {
         border-bottom: 1px solid var(--foreground);
