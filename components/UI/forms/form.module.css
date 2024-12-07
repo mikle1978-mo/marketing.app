@@ -52,7 +52,7 @@
 /* Анимация при фокусе */
 .input_field input:focus,
 .textarea_wrapper textarea:focus {
-    border-color: var(--primary-3);
+    border-color: var(--primary);
     box-shadow: var(--boxshadow);
     outline: none;
 }
@@ -87,26 +87,5 @@
 
     .form_title {
         font-size: 1.5rem;
-    }
-}
-
-@media (prefers-color-scheme: dark) {
-    .form {
-        background-color: var(--background);
-    }
-
-    .input_field input:focus,
-    .textarea_wrapper textarea:focus {
-        border-color: var(--primary-2);
-        box-shadow: var(--boxshadow);
-        outline: none;
-    }
-    .input_field input,
-    .textarea_wrapper textarea {
-        border: 1px solid #ddd;
-
-        background-color: #fff;
-        box-shadow: var(--boxshadow);
-        transition: border-color 0.3s, box-shadow 0.3s;
     }
 }

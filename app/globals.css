@@ -1,9 +1,9 @@
 :root {
     --foreground: #ffffff;
+    --foreground-0: #ffffff00;
     --background: #33363a;
 
     --primary: #f2f2f2;
-    --color: rgb(31, 31, 31);
 
     --secondary-0: #1e8e3e;
     --secondary-1: #d93025;
@@ -12,8 +12,8 @@
 
     --neutral-4: #58616d;
 
-    --border: 1px solid #f8f9fa;
-    --boxshadow: 0 1px 6px rgba(32, 33, 36, 0.28);
+    --border: 1px solid var(--foreground);
+    --boxshadow: 0 1px 6px var(--background);
 
     --text-shadow: 0px 0px 0.1rem var(--foreground),
         0px 0px 0.3rem var(--foreground), 0px 0px 0.6rem var(--foreground);
@@ -72,6 +72,16 @@ a {
     body {
         background-color: var(--background);
     }
+    :root {
+        --background: #ffffff;
+        --foreground: #33363a;
+        --foreground-0: #33363a00;
+
+        --primary: #171717;
+    }
+    .container {
+        background-color: var(--background);
+    }
 }
 
 .container {
@@ -96,13 +106,6 @@ td {
 
 /* Дополнительный стиль для темной темы */
 @media (prefers-color-scheme: dark) {
-    :root {
-        --text-shadow: 0px 0px 0.1rem var(--background),
-            0px 0px 0.3rem var(--background), 0px 0px 0.6rem var(--background);
-    }
-    .container {
-        background-color: var(--background);
-    }
     table {
         background: var(--background);
     }
@@ -127,6 +130,7 @@ td {
     border: 10px solid var(--primary-0);
     border-radius: 50%;
     border-top-color: var(--primary-1);
+    will-change: transform;
     animation: spin 1s ease-in-out infinite;
     -webkit-animation: spin 1s ease-in-out infinite;
 }

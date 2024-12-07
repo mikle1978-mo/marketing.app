@@ -28,10 +28,3 @@
         display: none;
     }
 }
-
-@media (prefers-color-scheme: dark) {
-    .header {
-        background-color: var(--background);
-        box-shadow: var(--boxshadow);
-    }
-}

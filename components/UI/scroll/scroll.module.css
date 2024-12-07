@@ -17,11 +17,7 @@
     width: 5%;
     height: 100%;
     z-index: 3;
-    background: linear-gradient(
-        90deg,
-        rgb(255, 255, 255),
-        rgba(255, 255, 255, 0)
-    );
+    background: linear-gradient(90deg, var(--foreground), var(--foreground-0));
 }
 .scroll::after {
     content: "";
@@ -32,11 +28,7 @@
     width: 3%;
     height: 100%;
     z-index: 3;
-    background: linear-gradient(
-        90deg,
-        rgba(255, 255, 255, 0),
-        rgba(255, 255, 255, 1)
-    );
+    background: linear-gradient(90deg, var(--foreground-0), var(--foreground));
 }
 
 .scroll div {
@@ -51,7 +43,6 @@
     border-radius: 5px;
     /* word-spacing: 10px; */
     text-transform: uppercase;
-    color: var(--color);
     white-space: nowrap;
     margin-right: 20px; /* Отступ между блоками */
 }

@@ -27,12 +27,3 @@
         display: none;
     }
 }
-
-@media (prefers-color-scheme: dark) {
-    .logo_img {
-        border: 2px solid var(--foreground);
-    }
-    .logo:hover {
-        filter: drop-shadow(0px 0px 5px var(--foreground));
-    }
-}

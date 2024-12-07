@@ -79,17 +79,3 @@
         display: block;
     }
 }
-
-@media (prefers-color-scheme: dark) {
-    .nav_overlay {
-        background-color: var(--opacity-5);
-    }
-    .mnavigation {
-        background-color: var(--background);
-
-        box-shadow: var(--boxshadow);
-    }
-    .mnavigation ul li {
-        border-bottom: 1px solid var(--foreground);
-    }
-}

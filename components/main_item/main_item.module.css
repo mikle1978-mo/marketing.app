@@ -58,11 +58,3 @@
 .figcaption h2 {
     font-weight: normal;
 }
-
-@media (prefers-color-scheme: dark) {
-    .figure {
-        background-color: var(--background);
-
-        box-shadow: var(--boxshadow);
-    }
-}

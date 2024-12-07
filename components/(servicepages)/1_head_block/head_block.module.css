@@ -75,14 +75,13 @@
     display: block;
     font-weight: bolder;
     font-size: 2.5rem;
-    color: var(--secondary-1);
-    background-color: var(--foreground);
+    color: var(--background);
+    background-color: var(--secondary-0);
     text-align: center;
     padding: 0 0.5rem;
     width: 200px;
     align-self: flex-end;
     z-index: 2;
-
     animation: y 3s linear infinite;
 }
 
@@ -93,18 +92,6 @@
 .period_wrapper {
     font-size: 1.2rem;
     z-index: 1;
-}
-
-@media (prefers-color-scheme: dark) {
-    .title:nth-child(2n) {
-        background: linear-gradient(
-            90deg,
-            var(--secondary-1),
-            var(--foreground)
-        ); /* подробнее про градиенты */
-        background-clip: text;
-        -webkit-background-clip: text; /* подробнее про background-clip */
-    }
 }
 
 @media (max-width: 710px) {

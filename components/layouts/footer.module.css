@@ -40,6 +40,7 @@
 .wrapper {
     background-color: var(--primary);
     height: 100%;
+    padding: 0.5rem;
 }
 
 .bottom_item {
@@ -53,8 +54,8 @@
 .title {
     /* text-transform: uppercase; */
     text-decoration: underline;
-    padding-bottom: 1rem;
-    margin-top: 2rem;
+    padding-bottom: 0.5rem;
+    margin-top: 1rem;
     font-size: 1rem;
 }
 .icons_wrapper {
@@ -74,22 +75,5 @@
 @media (max-width: 570px) {
     .line {
         display: none;
-    }
-}
-
-@media (prefers-color-scheme: dark) {
-    .footer {
-        background-color: var(--background);
-        box-shadow: var(--boxshadow);
-    }
-    .line {
-        background-color: var(--background);
-    }
-
-    .bottom_item {
-        background-color: var(--background);
-    }
-    .bottom_item *:hover {
-        filter: drop-shadow(0px 0px 5px var(--primary));
     }
 }

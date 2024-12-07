@@ -78,15 +78,3 @@
         display: inline-block;
     }
 }
-
-@media (prefers-color-scheme: dark) {
-    .icon {
-        background-color: var(--foreground);
-    }
-    .icon:before {
-        background-color: var(--foreground);
-    }
-    .icon:after {
-        background-color: var(--foreground);
-    }
-}
