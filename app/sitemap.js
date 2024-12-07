@@ -8,12 +8,6 @@ export default async function sitemap() {
             lastModified: new Date().toISOString(),
         }));
 
-        // Создание записей для страниц описания услуг
-        const descriptionEntries = ServicesList.map(({ slug }) => ({
-            url: `${process.env.API_URL}/${slug}/description`,
-            lastModified: new Date().toISOString(),
-        }));
-
         // Создание записей для общих страниц
         const staticEntries = [
             {
@@ -25,7 +19,6 @@ export default async function sitemap() {
         return [
             ...staticEntries, // Общие страницы
             ...serviceEntries, // Основные страницы услуг
-            ...descriptionEntries, // Страницы описания услуг
         ];
     } catch (error) {
         console.error("Ошибка при генерации sitemap:", error);
