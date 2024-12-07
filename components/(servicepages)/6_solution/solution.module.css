@@ -64,6 +64,14 @@
     min-height: 200px;
 }
 
+.card_front > summary::-webkit-details-marker {
+    display: none;
+}
+
+.card_front > summary {
+    list-style: none;
+}
+
 .card_back {
     padding: 1rem;
     font-size: 1rem;

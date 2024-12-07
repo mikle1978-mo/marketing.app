@@ -11,58 +11,9 @@
     align-self: center;
     transition: all 0.3s ease-in;
     animation: y 2s linear infinite;
+    color: var(--background);
 }
 
 .button:hover {
-    transform: scale(1.01);
-    filter: drop-shadow(0px 0px 5px var(--primary));
-}
-
-@media (prefers-color-scheme: dark) {
-    .button {
-        background-color: var(--primary);
-
-        animation: x 2s linear infinite;
-    }
-
-    .button:hover {
-        animation: none;
-    }
-}
-
-@keyframes x {
-    0% {
-        filter: drop-shadow(0px 0px 1px var(--foreground));
-    }
-
-    25% {
-        filter: drop-shadow(0px 0px 3px var(--foreground));
-    }
-    50% {
-        filter: drop-shadow(0px 0px 5px var(--foreground));
-    }
-    75% {
-        filter: drop-shadow(0px 0px 3px var(--foreground));
-    }
-    100% {
-        filter: drop-shadow(0px 0px 1px var(--foreground));
-    }
-}
-@keyframes y {
-    0% {
-        filter: drop-shadow(0px 0px 1px var(--backround));
-    }
-
-    25% {
-        filter: drop-shadow(0px 0px 3px var(--background));
-    }
-    50% {
-        filter: drop-shadow(0px 0px 5px var(--background));
-    }
-    75% {
-        filter: drop-shadow(0px 0px 3px var(--background));
-    }
-    100% {
-        filter: drop-shadow(0px 0px 1px var(--background));
-    }
+    box-shadow: var(--boxshadow);
 }
