@@ -11,7 +11,7 @@ export default function Article({ item }) {
                 <h1 className={cl.title}>{item.title}</h1>
                 <p className={cl.subtitle}>{item.subtitle}</p>
                 <p className={cl.date}>Дата публикации: {item.date}</p>
-            </header>{" "}
+            </header>
             <img className={cl.image} src={item.img} alt='Обложка статьи' />
             <section
                 className={cl.content}

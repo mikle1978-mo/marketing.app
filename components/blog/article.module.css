@@ -13,7 +13,7 @@
 }
 
 .title {
-    font-size: 2rem;
+    font-size: 1.5rem;
     margin-bottom: 0.5rem;
 }
 
@@ -34,11 +34,33 @@
     margin: 0.5rem 0;
 }
 
-.content {
-    font-size: 1.1rem;
-    line-height: 1.6;
+.content article {
+    line-height: 1.5;
     text-align: justify;
+    text-indent: 1rem;
 }
+.content article h2 {
+    line-height: 1.5;
+    text-align: center;
+    text-indent: 1rem;
+    margin: 0.5rem auto;
+}
+.content article > ul > li {
+    list-style: none;
+}
+.content article > a {
+    color: var(--secondary-2) !important; /* Основной цвет ссылки */
+    cursor: pointer; /* Вид курсора */
+    text-decoration: underline !important; /* Подчеркивание */
+    font-weight: bold; /* Дополнительно: можно добавить жирный шрифт */
+    transition: color 0.3s ease; /* Плавный переход цвета при наведении */
+}
+
+.content article > a:hover {
+    color: var(--primary); /* Изменение цвета при наведении */
+    text-decoration: none; /* Убирает подчеркивание при наведении */
+}
+
 .goback {
     display: block; /* или block, если нужно, чтобы элемент занимал всю ширину */
     text-align: center;
