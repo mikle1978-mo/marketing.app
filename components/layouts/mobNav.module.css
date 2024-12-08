@@ -2,13 +2,6 @@
     display: none;
 }
 
-.mobnav_toprow {
-    display: flex;
-    flex-direction: row;
-    gap: 0.5rem;
-    padding-bottom: 1.5rem;
-}
-
 @media (max-width: 989px) {
     /* Полупрозрачный фон */
     .nav_overlay {
@@ -17,7 +10,7 @@
         left: 0;
         width: 100%;
         height: 100%;
-        background-color: var(--opacity-4);
+        background-color: rgba(0, 0, 0, 0.5); /* Сделаем фон чуть темнее */
         display: none;
         z-index: 2;
         transition: opacity 0.3s ease-in-out;
@@ -42,12 +35,12 @@
         justify-content: flex-start;
         align-items: center;
         z-index: 3;
-        overflow-y: auto; /* Полоса прокрутки */
+        overflow-y: auto;
         transition: right 0.4s ease-in-out;
-        padding-top: 1rem;
-        padding-bottom: 3rem;
+        padding: 1.5rem 1rem;
         font-size: 1rem;
         box-shadow: var(--boxshadow);
+        border-radius: 0 0 0 0.5rem; /* Закругление левого нижнего угла */
     }
 
     .mnavigation.open {
@@ -56,26 +49,71 @@
 
     .mnavigation ul {
         width: 100%;
-        padding: 0 1rem;
+        padding: 0;
         display: flex;
         flex-direction: column;
         list-style-type: none;
+        gap: 1rem;
     }
 
     .mnavigation ul li {
-        padding: 0.5rem 0;
+        padding: 0.5rem 0.8rem;
         width: 100%;
         text-align: left;
-        border-bottom: 1px solid var(--background);
+        border-radius: 0.5rem; /* Закругляем элементы */
+        transition: background-color 0.2s ease;
+    }
+
+    .mnavigation ul li:hover {
+        background-color: var(--primary); /* Лёгкая подсветка */
+    }
+
+    .mnavigation ul li > span {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        cursor: pointer;
     }
 
     .mnavigation ul li ul {
-        position: static;
         display: none;
         padding-left: 1rem;
+        margin-top: 0.5rem;
+        border-left: 2px solid var(--primary); /* Цветной индикатор слева */
     }
 
-    .mnavigation ul li:hover > ul {
+    .mnavigation ul li.open ul {
         display: block;
+    }
+
+    .mnavigation ul li ul li {
+        padding: 0.5rem 0.5rem;
+        font-size: 0.9rem;
+        background-color: var(--primary); /* Слегка выделяем подменю */
+        border-radius: 0.3rem;
+    }
+
+    .mnavigation ul li ul li:hover {
+        background-color: var(--primary);
+        color: var(--foreground); /* Контрастный цвет текста */
+    }
+    .icon_open {
+        transform: rotate(180deg);
+        transition: transform 0.3s;
+    }
+
+    /* Кнопка "Заказать" */
+    .mobnav_toprow {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        gap: 0.5rem;
+        padding-bottom: 1.5rem;
+    }
+
+    /* Социальные сети */
+    .socials_wrapper {
+        margin-top: auto;
+        padding: 1rem 0;
     }
 }

@@ -2,15 +2,15 @@ import cl from "./page.module.css";
 
 export const metadata = {
     metadataBase: new URL(process.env.API_URL),
-    title: "Наши преимущества - MarketingStark",
+    title: "Блог о рекламе - MarketingStark",
 
-    description: "Почему стоит заказать у MarketingStark",
+    description: "Полезные статьи про рекламу MarketingStark",
     alternates: {
-        canonical: `${process.env.API_URL}/best`,
+        canonical: `${process.env.API_URL}/blog`,
     },
 };
 
-export default function WeAreTheBest() {
+export default function Blog() {
     return (
         <div className={cl.best}>
             <h1>Почему стоит работать с нами?</h1>
