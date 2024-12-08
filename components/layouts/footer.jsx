@@ -27,6 +27,11 @@ export default function Footer() {
                             <h3 className={cl.title}>Документы</h3>
                             <ul className={cl.bottom_item}>
                                 <li>
+                                    <Link href='/blog' className={cl.link}>
+                                        Блог
+                                    </Link>
+                                </li>
+                                <li>
                                     <Link href='/privacy' className={cl.link}>
                                         Персональные данные
                                     </Link>

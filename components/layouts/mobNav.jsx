@@ -105,6 +105,11 @@ export default function MobNav({ isOpen, closeMenu, toggleOpen }) {
                             CEO
                         </Link>
                     </li>
+                    <li>
+                        <Link onClick={closeMenu} href='/blog'>
+                            Блог
+                        </Link>
+                    </li>
                 </ul>
 
                 <div className={cl.socials_wrapper}>

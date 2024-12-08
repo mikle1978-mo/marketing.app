@@ -1,14 +1,15 @@
 "use client";
-import cl from "./main_item.module.css";
+
+import cl from "./article_item.module.css";
 import Image from "next/image";
 import { useRouter } from "next/navigation";
 
-export default function Main_item({ item }) {
+export default function ArticleItem({ item }) {
     const router = useRouter();
     return (
         <figure
             className={cl.figure}
-            onClick={() => router.push(`/${item.slug}`)}
+            onClick={() => router.push(`/blog/${item.id}`)}
         >
             <div className={cl.img_wrapper}>
                 <Image
@@ -22,8 +23,8 @@ export default function Main_item({ item }) {
             </div>
 
             <figcaption className={cl.figcaption}>
-                <h2 className={`${cl.title} ${cl.highlight}`}>{item.title}</h2>
-                {/* <div className={cl.desc}>{item.title}</div> */}
+                <h2 className={cl.title}>{item.title}</h2>
+                <span>{item.date}</span>
             </figcaption>
         </figure>
     );

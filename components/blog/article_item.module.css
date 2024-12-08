@@ -1,0 +1,59 @@
+/* Добавляем стили для карточек внутри контейнера */
+.figure {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    flex: 1 1 300px; /* Карточки будут занимать минимум 300px и растягиваться */
+    max-width: 400px; /* Максимальная ширина */
+    aspect-ratio: 4 / 3; /* Пропорции 4:3 */
+    border-radius: 0.5rem;
+    transition: all 0.3s;
+    background-color: var(--foreground);
+    text-align: justify;
+    overflow: hidden;
+    cursor: pointer;
+    box-shadow: var(--boxshadow);
+    padding: 0.5rem;
+}
+
+.figure:hover {
+    transform: scale(1.01); /* Увеличение изображения на 5% */
+    filter: grayscale(80%);
+    transition: transform 1s ease; /* Плавный переход */
+}
+.img_wrapper {
+    width: 100%;
+    aspect-ratio: 16/9;
+    position: relative;
+}
+
+.img {
+    /* width: 100%;
+    height: 100%; */
+    object-fit: cover;
+    border-radius: 0.5rem;
+    z-index: 1;
+}
+
+.figcaption {
+    width: 100%;
+    flex: 1 1 content;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    gap: 0.5rem;
+    z-index: 3;
+    position: relative;
+}
+
+.figcaption h2 {
+    font-weight: normal;
+}
+.figcaption span {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    font-size: 0.7rem;
+}
