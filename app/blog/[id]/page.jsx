@@ -23,7 +23,7 @@ export async function generateMetadata({ params }) {
 
     return {
         metadataBase: new URL(process.env.API_URL),
-        title: item.name,
+        title: item.title,
         description: item.meta_desc,
         keywords: item?.keywords,
         openGraph: {
