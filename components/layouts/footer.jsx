@@ -44,11 +44,6 @@ export default function Footer() {
                                         Тарифы
                                     </Link>
                                 </li>
-                                <li>
-                                    <Link href='/best' className={cl.link}>
-                                        Наши преимущества
-                                    </Link>
-                                </li>
                             </ul>
                         </div>
                     </div>
