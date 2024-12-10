@@ -41,7 +41,7 @@ export default function PriceList() {
                                     href={`/${item.slug}`}
                                     className={cl.link}
                                 >
-                                    {item?.name}{" "}
+                                    {item?.title}{" "}
                                 </Link>
                             </td>
                             <td className={cl.item}>

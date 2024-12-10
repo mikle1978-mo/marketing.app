@@ -94,25 +94,20 @@ a {
 table {
     width: 100%;
     border-collapse: collapse;
-    background: var(--foreground);
 }
 
 th,
 td {
     padding: 0.5rem;
-    border: 1px solid var(--primary-2);
+    border: 1px solid var(--primary);
     text-align: left;
 }
 
 /* Дополнительный стиль для темной темы */
 @media (prefers-color-scheme: dark) {
-    table {
-        background: var(--background);
-    }
-
     th,
     td {
-        border-color: var(--primary-3); /* Цвет границы для темной темы */
+        border-color: var(--primary); /* Цвет границы для темной темы */
     }
 }
 
@@ -127,9 +122,9 @@ td {
     width: 50px;
     height: 50px;
     margin: 0 auto;
-    border: 10px solid var(--primary-0);
+    border: 10px solid var(--primary);
     border-radius: 50%;
-    border-top-color: var(--primary-1);
+    border-top-color: var(--primary);
     will-change: transform;
     animation: spin 1s ease-in-out infinite;
     -webkit-animation: spin 1s ease-in-out infinite;
