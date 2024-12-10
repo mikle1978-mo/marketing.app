@@ -11,7 +11,7 @@
     margin: 0 auto;
     gap: 1rem;
     background-color: var(--foreground);
-    border-radius: 12px;
+    border-radius: 0.5rem;
     box-shadow: var(--boxshadow);
     height: auto;
 }
@@ -40,10 +40,10 @@
 .input_field input,
 .textarea_wrapper textarea {
     width: 100%;
-    padding: 12px 16px;
+    padding: 0.5rem;
     border: 1px solid #ddd;
-    border-radius: 8px;
-    font-size: 16px;
+    border-radius: 0.25rem;
+    font-size: 1rem;
     background-color: #fff;
     box-shadow: var(--boxshadow);
     transition: border-color 0.3s, box-shadow 0.3s;

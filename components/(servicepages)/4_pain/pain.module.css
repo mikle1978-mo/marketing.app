@@ -40,7 +40,7 @@
     width: 100%; /* Изображение растягивается по ширине фигуры */
     aspect-ratio: 3 / 2; /* Устанавливаем квадратное соотношение сторон */
     object-fit: cover; /* Обрезаем лишнее, чтобы заполнить квадрат */
-    border-radius: 0.5rem;
+    border-radius: 0.25rem;
 }
 
 .pains figcaption {

@@ -19,7 +19,7 @@
 .card {
     position: relative;
     background: var(--foreground);
-    border-radius: 1rem;
+    border-radius: 0.5rem;
     box-shadow: var(--boxshadow);
     overflow: hidden;
     transition: transform 0.3s, box-shadow 0.3s;
@@ -62,6 +62,7 @@
     align-items: center;
     text-align: center;
     min-height: 200px;
+    border-radius: 0.25rem;
 }
 
 .card > summary::-webkit-details-marker {
