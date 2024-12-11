@@ -37,6 +37,36 @@ export async function generateMetadata({ params }) {
         alternates: {
             canonical: `${process.env.API_URL}/${item.slug}`,
         },
+        other: {
+            // Добавляем JSON-LD микроразметку
+            "application/ld+json": JSON.stringify({
+                "@context": "https://schema.org",
+                "@type": "Service",
+                name: item.title,
+                description: item.meta_desc,
+                provider: {
+                    "@type": "Organization",
+                    name: "Marketing Stark",
+                    url: process.env.API_URL,
+                    logo: `${process.env.API_URL}/logo.png`,
+                },
+                areaServed: {
+                    "@type": "Place",
+                    address: {
+                        "@type": "PostalAddress",
+                        addressLocality: "Турция",
+                    },
+                },
+                serviceType: item.title,
+                offers: {
+                    "@type": "Offer",
+                    priceCurrency: "USD",
+                    price: item.price || "100",
+                    url: `${process.env.API_URL}/${item.slug}`,
+                    description: item.meta_desc,
+                },
+            }),
+        },
     };
 }
 
