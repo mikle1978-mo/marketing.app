@@ -117,7 +117,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
                                 "Настройка рекламы в Yandex Direct, Google Ads, Яндекс Директ, Гугл Адс. Настройка контекстной рекламы. Ведение, оптимизация, аудит рекламных кампаний. CEO, СЕО оптимизация, разработка продающих лендингов, сайтов и сайтов для интернет магазинов",
                             address: {
                                 "@type": "PostalAddress",
-                                addressLocality: "Город, Турция",
+                                addressLocality: "Кемер, Aнталия, Турция",
                                 // postalCode: "00000",
                                 // streetAddress: "Улица, дом",
                             },

@@ -32,7 +32,17 @@ export async function generateMetadata({ params }) {
         description: item.meta_desc,
         keywords: item?.keywords,
         openGraph: {
-            images: item.img || ["/images/default_item.png"],
+            title: item.title,
+            description: item.meta_desc,
+            url: `${process.env.API_URL}/${item.slug}`,
+            images: item.img ? [item.img] : ["/images/default_item.png"],
+            type: "website",
+        },
+        twitter: {
+            card: "summary_large_image",
+            title: item.title,
+            description: item.meta_desc,
+            image: item.img || "/images/default_item.png",
         },
         alternates: {
             canonical: `${process.env.API_URL}/${item.slug}`,
@@ -64,6 +74,7 @@ export async function generateMetadata({ params }) {
                     price: item.price || "100",
                     url: `${process.env.API_URL}/${item.slug}`,
                     description: item.meta_desc,
+                    availability: "https://schema.org/InStock",
                 },
             }),
         },
