@@ -101,6 +101,9 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
                     }}
                 />
                 {/* End Google Tag Manager */}
+                {/* Start Yandex verification */}
+                <meta name='yandex-verification' content='aa6d456bdb10af99' />
+                {/* End Yandex verification */}
             </head>
             <body>
                 {/* Google Tag Manager (noscript) */}
