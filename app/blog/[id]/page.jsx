@@ -29,7 +29,7 @@ export async function generateMetadata({ params }) {
         openGraph: {
             title: item.title,
             description: item.meta_desc,
-            url: `${process.env.API_URL}/blog/${item.slug}`,
+            url: `${process.env.API_URL}/blog/${item.id}`,
             images: item.img ? [item.img] : ["/images/default_item.png"],
             type: "article",
         },
@@ -41,7 +41,7 @@ export async function generateMetadata({ params }) {
             creator: item.author || "Автор не указан", // Имя автора
         },
         alternates: {
-            canonical: `${process.env.API_URL}/blog/${item.slug}`,
+            canonical: `${process.env.API_URL}/blog/${item.id}`,
         },
         other: {
             "application/ld+json": JSON.stringify({
@@ -64,7 +64,7 @@ export async function generateMetadata({ params }) {
                 dateModified: item.dateModified,
                 mainEntityOfPage: {
                     "@type": "WebPage",
-                    "@id": `${process.env.API_URL}/blog/${item.slug}`,
+                    "@id": `${process.env.API_URL}/blog/${item.id}`,
                 },
                 description: item.meta_desc,
                 image:
