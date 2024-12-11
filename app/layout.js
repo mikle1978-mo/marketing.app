@@ -104,6 +104,35 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
                 {/* Start Yandex verification */}
                 <meta name='yandex-verification' content='aa6d456bdb10af99' />
                 {/* End Yandex verification */}
+                <script
+                    type='application/ld+json'
+                    dangerouslySetInnerHTML={{
+                        __html: JSON.stringify({
+                            "@context": "https://schema.org",
+                            "@type": "Organization",
+                            name: "Marketing Stark",
+                            url: "https://marketingstark.app",
+                            logo: "https://marketingstark.app/logo.png",
+                            description:
+                                "Настройка рекламы в Yandex Direct, Google Ads, Яндекс Директ, Гугл Адс. Настройка контекстной рекламы. Ведение, оптимизация, аудит рекламных кампаний. CEO, СЕО оптимизация, разработка продающих лендингов, сайтов и сайтов для интернет магазинов",
+                            address: {
+                                "@type": "PostalAddress",
+                                addressLocality: "Город, Турция",
+                                // postalCode: "00000",
+                                // streetAddress: "Улица, дом",
+                            },
+                            contactPoint: {
+                                "@type": "ContactPoint",
+                                telephone: "+90 535 606 2642",
+                                contactType: "customer service",
+                                areaServed: "Турция",
+                            },
+                            sameAs: [
+                                "https://www.instagram.com/marketingstark_app/",
+                            ],
+                        }),
+                    }}
+                />
             </head>
             <body>
                 {/* Google Tag Manager (noscript) */}

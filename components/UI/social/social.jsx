@@ -8,6 +8,7 @@ import {
     faTelegram,
     faWhatsapp,
     faTwitter,
+    faInstagram,
 } from "@fortawesome/free-brands-svg-icons";
 import cl from "./social.module.css";
 
@@ -36,6 +37,12 @@ export default function Social() {
                     </a> */}
             <a href='https://t.me/+905356062642' className={cl.link}>
                 <FontAwesomeIcon className={cl.icons} icon={faTelegram} />
+            </a>
+            <a
+                href='https://www.instagram.com/marketingstark_app/'
+                className={cl.link}
+            >
+                <FontAwesomeIcon className={cl.icons} icon={faInstagram} />
             </a>
         </div>
     );
