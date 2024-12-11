@@ -1,6 +1,4 @@
-import Article, {
-    metadata as articleMetadata,
-} from "@/components/blog/article"; // Проверьте путь и имя
+import Article from "@/components/blog/article"; // Проверьте путь и имя
 import { ArticlesList } from "@/lib/articles";
 import cl from "./page.module.css";
 import Scroll from "@/components/UI/scroll/scroll";

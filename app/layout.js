@@ -103,6 +103,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
                 {/* End Google Tag Manager */}
                 {/* Start Yandex verification */}
                 <meta name='yandex-verification' content='aa6d456bdb10af99' />
+                <meta name='yandex-verification' content='bda6adf35ed76225' />
                 {/* End Yandex verification */}
                 <script
                     type='application/ld+json'
