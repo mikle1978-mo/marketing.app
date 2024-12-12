@@ -60,13 +60,13 @@ export default function ServicePage({ params }) {
     const jsonLd = {
         "@context": "https://schema.org",
         "@type": "Service",
-        name: item.title,
-        description: item.meta_desc,
+        name: item?.title || "Услуга", // Подстраховка на случай отсутствия данных
+        description: item?.meta_desc || "Описание услуги недоступно",
         provider: {
             "@type": "Organization",
             name: "Marketing Stark",
-            url: process.env.API_URL,
-            logo: `${process.env.API_URL}/logo.png`,
+            url: process.env.API_URL || "https://example.com", // Подстраховка, если API_URL отсутствует
+            logo: `${process.env.API_URL || "https://example.com"}/logo.png`,
         },
         areaServed: {
             "@type": "Place",
@@ -75,16 +75,20 @@ export default function ServicePage({ params }) {
                 addressLocality: "Турция",
             },
         },
-        serviceType: item.title,
+        serviceType: item?.title || "Услуга",
         offers: {
             "@type": "Offer",
             priceCurrency: "USD",
-            price: item.price || "100",
-            url: `${process.env.API_URL}/${item.slug}`,
-            description: item.meta_desc,
+            price: item?.price || "100", // Значение по умолчанию
+            url: `${process.env.API_URL || "https://example.com"}/${
+                item?.slug || "service"
+            }`,
+            description: item?.meta_desc || "Описание предложения недоступно",
             availability: "https://schema.org/InStock",
         },
     };
+
+    console.log(jsonLd);
 
     return (
         <>
