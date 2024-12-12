@@ -1,6 +1,6 @@
 import cl from "./page.module.css";
 import ArticlesListComponent from "@/components/blog/articleslist";
-import Head from "next/head";
+import Script from "next/script";
 
 export const metadata = {
     metadataBase: new URL(process.env.API_URL),
@@ -38,14 +38,11 @@ export default function Blog() {
     };
     return (
         <>
-            <Head>
-                <script
-                    type='application/ld+json'
-                    dangerouslySetInnerHTML={{
-                        __html: JSON.stringify(jsonLd),
-                    }}
-                />
-            </Head>
+            <Script
+                id='json-ld'
+                type='application/ld+json'
+                dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+            />
             <section className={cl.blog}>
                 <h1>Полезные статьи о рекламе и не только</h1>
                 <ArticlesListComponent />

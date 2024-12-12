@@ -9,7 +9,7 @@ import Solution from "@/components/(servicepages)/6_solution/solution";
 import Action from "@/components/(servicepages)/7_action/action";
 import Scroll from "@/components/UI/scroll/scroll";
 import Additional from "@/components/(servicepages)/8_additional/additional";
-import Head from "next/head";
+import Script from "next/script";
 
 export async function generateStaticParams() {
     const params = ServicesList.map((service) => ({ slug: service.slug }));
@@ -91,14 +91,11 @@ export default function ServicePage({ params }) {
 
     return (
         <>
-            <Head>
-                <script
-                    type='application/ld+json'
-                    dangerouslySetInnerHTML={{
-                        __html: JSON.stringify(jsonLd),
-                    }}
-                />
-            </Head>
+            <Script
+                id='json-ld'
+                type='application/ld+json'
+                dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+            />
             <main className={cl.main}>
                 <Scroll line={item?.line} />
                 <HeadBlock item={item} />

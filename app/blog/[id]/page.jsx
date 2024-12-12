@@ -2,7 +2,7 @@ import Article from "@/components/blog/article"; // Проверьте путь 
 import { ArticlesList } from "@/lib/articles";
 import cl from "./page.module.css";
 import Scroll from "@/components/UI/scroll/scroll";
-import Head from "next/head";
+import Script from "next/script";
 
 export async function generateStaticParams() {
     const params = ArticlesList.map((article) => ({ id: article.id }));
@@ -79,14 +79,11 @@ export default function ArticlePage({ params }) {
 
     return (
         <>
-            <Head>
-                <script
-                    type='application/ld+json'
-                    dangerouslySetInnerHTML={{
-                        __html: JSON.stringify(jsonLd),
-                    }}
-                />
-            </Head>
+            <Script
+                id='json-ld'
+                type='application/ld+json'
+                dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+            />
             <Article item={item} />
             <Scroll line={item.line} />
         </>
