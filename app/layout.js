@@ -123,7 +123,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
                             address: {
                                 "@type": "PostalAddress",
                                 addressLocality: "Кемер, Aнталия, Турция",
-                                addressCountry: "Турция",
+                                addressCountry: "TR",
                                 streetAddress: "Куздере",
                                 postalCode: "07982",
                             },
