@@ -32,7 +32,7 @@ export default function HeadBlock({ item }) {
                             dangerouslySetInnerHTML={{ __html: item.subtitle2 }}
                         />
                     )}
-                    <div className={cl.price}>{item.price}</div>
+                    <div className={cl.price}>от {item.price}$</div>
                 </div>
                 <div className={cl.form_wrapper}>
                     <Form

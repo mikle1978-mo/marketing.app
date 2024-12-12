@@ -61,7 +61,7 @@ export default function ServicePage({ params }) {
         "@context": "https://schema.org",
         "@type": "Service",
         name: item?.title || "Услуга", // Подстраховка на случай отсутствия данных
-        description: item?.meta_desc || "Описание услуги недоступно",
+        description: item?.schema_desc || "Описание услуги недоступно",
         provider: {
             "@type": "Organization",
             name: "Marketing Stark",
@@ -83,7 +83,7 @@ export default function ServicePage({ params }) {
             url: `${process.env.API_URL || "https://example.com"}/${
                 item?.slug || "service"
             }`,
-            description: item?.meta_desc || "Описание предложения недоступно",
+            description: item?.schema_desc || "Описание предложения недоступно",
             availability: "https://schema.org/InStock",
         },
     };
