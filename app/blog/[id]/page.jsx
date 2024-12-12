@@ -2,6 +2,7 @@ import Article from "@/components/blog/article"; // Проверьте путь 
 import { ArticlesList } from "@/lib/articles";
 import cl from "./page.module.css";
 import Scroll from "@/components/UI/scroll/scroll";
+import Head from "next/head";
 
 export async function generateStaticParams() {
     const params = ArticlesList.map((article) => ({ id: article.id }));
@@ -41,35 +42,6 @@ export async function generateMetadata({ params }) {
         alternates: {
             canonical: `${process.env.API_URL}/blog/${item.id}`,
         },
-        other: {
-            "application/ld+json": JSON.stringify({
-                "@context": "https://schema.org",
-                "@type": "Article",
-                headline: item.title,
-                author: {
-                    "@type": "Person",
-                    name: item.author || "Автор не указан",
-                },
-                publisher: {
-                    "@type": "Organization",
-                    name: "MarketingStark",
-                    logo: {
-                        "@type": "ImageObject",
-                        url: `${process.env.API_URL}/logo.png`,
-                    },
-                },
-                datePublished: item.date,
-                dateModified: item.date,
-                mainEntityOfPage: {
-                    "@type": "WebPage",
-                    "@id": `${process.env.API_URL}/blog/${item.id}`,
-                },
-                description: item.meta_desc,
-                image:
-                    item.img ||
-                    `${process.env.API_URL}/images/default_item.png`,
-            }),
-        },
     };
 }
 
@@ -79,8 +51,42 @@ export default function ArticlePage({ params }) {
         return <p>Статья не найдена</p>;
     }
 
+    const jsonLd = {
+        "@context": "https://schema.org",
+        "@type": "Article",
+        headline: item.title,
+        author: {
+            "@type": "Person",
+            name: item.author || "Автор не указан",
+        },
+        publisher: {
+            "@type": "Organization",
+            name: "MarketingStark",
+            logo: {
+                "@type": "ImageObject",
+                url: `${process.env.API_URL}/logo.png`,
+            },
+        },
+        datePublished: item.date,
+        dateModified: item.date,
+        mainEntityOfPage: {
+            "@type": "WebPage",
+            "@id": `${process.env.API_URL}/blog/${item.id}`,
+        },
+        description: item.meta_desc,
+        image: item.img || `${process.env.API_URL}/images/default_item.png`,
+    };
+
     return (
         <>
+            <Head>
+                <script
+                    type='application/ld+json'
+                    dangerouslySetInnerHTML={{
+                        __html: JSON.stringify(jsonLd),
+                    }}
+                />
+            </Head>
             <Article item={item} />
             <Scroll line={item.line} />
         </>

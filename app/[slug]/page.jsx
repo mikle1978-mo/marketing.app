@@ -47,37 +47,6 @@ export async function generateMetadata({ params }) {
         alternates: {
             canonical: `${process.env.API_URL}/${item.slug}`,
         },
-        other: {
-            // Добавляем JSON-LD микроразметку
-            "application/ld+json": JSON.stringify({
-                "@context": "https://schema.org",
-                "@type": "Service",
-                name: item.title,
-                description: item.meta_desc,
-                provider: {
-                    "@type": "Organization",
-                    name: "Marketing Stark",
-                    url: process.env.API_URL,
-                    logo: `${process.env.API_URL}/logo.png`,
-                },
-                areaServed: {
-                    "@type": "Place",
-                    address: {
-                        "@type": "PostalAddress",
-                        addressLocality: "Турция",
-                    },
-                },
-                serviceType: item.title,
-                offers: {
-                    "@type": "Offer",
-                    priceCurrency: "USD",
-                    price: item.price || "100",
-                    url: `${process.env.API_URL}/${item.slug}`,
-                    description: item.meta_desc,
-                    availability: "https://schema.org/InStock",
-                },
-            }),
-        },
     };
 }
 
@@ -87,24 +56,72 @@ export default function ServicePage({ params }) {
         (item) => item.slug !== params.slug
     );
 
+    const jsonLd = {
+        // Добавляем JSON-LD микроразметку
+        "application/ld+json": JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "Service",
+            name: item.title,
+            description: item.meta_desc,
+            provider: {
+                "@type": "Organization",
+                name: "Marketing Stark",
+                url: process.env.API_URL,
+                logo: `${process.env.API_URL}/logo.png`,
+            },
+            areaServed: {
+                "@type": "Place",
+                address: {
+                    "@type": "PostalAddress",
+                    addressLocality: "Турция",
+                },
+            },
+            serviceType: item.title,
+            offers: {
+                "@type": "Offer",
+                priceCurrency: "USD",
+                price: item.price || "100",
+                url: `${process.env.API_URL}/${item.slug}`,
+                description: item.meta_desc,
+                availability: "https://schema.org/InStock",
+            },
+        }),
+    };
+
     return (
-        <main className={cl.main}>
-            <Scroll line={item?.line} />
-            <HeadBlock item={item} />
-            <Problem problems={item?.problems} title={item?.problem_title} />
-            <Mistake mistakes={item?.mistakes} title={item?.mistake_title} />
-            <Pain pains={item?.pains} title={item?.pain_title} />
-            <Hope hopes={item?.hopes} title={item?.hope_title} />
-            <Solution
-                solutions={item?.solutions}
-                title={item?.solution_title}
-            />
-            <Action actions={item?.actions} title={item?.action_title} />
-            <Additional
-                additionals={additionals}
-                title={"Вам также может понадобиться"}
-            />
-            <Scroll line={item?.line} />
-        </main>
+        <>
+            <Head>
+                <script
+                    type='application/ld+json'
+                    dangerouslySetInnerHTML={{
+                        __html: JSON.stringify(jsonLd),
+                    }}
+                />
+            </Head>
+            <main className={cl.main}>
+                <Scroll line={item?.line} />
+                <HeadBlock item={item} />
+                <Problem
+                    problems={item?.problems}
+                    title={item?.problem_title}
+                />
+                <Mistake
+                    mistakes={item?.mistakes}
+                    title={item?.mistake_title}
+                />
+                <Pain pains={item?.pains} title={item?.pain_title} />
+                <Hope hopes={item?.hopes} title={item?.hope_title} />
+                <Solution
+                    solutions={item?.solutions}
+                    title={item?.solution_title}
+                />
+                <Action actions={item?.actions} title={item?.action_title} />
+                <Additional
+                    additionals={additionals}
+                    title={"Вам также может понадобиться"}
+                />
+                <Scroll line={item?.line} />
+            </main>
+        </>
     );
 }
