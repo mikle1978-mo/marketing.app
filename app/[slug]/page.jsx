@@ -9,6 +9,7 @@ import Solution from "@/components/(servicepages)/6_solution/solution";
 import Action from "@/components/(servicepages)/7_action/action";
 import Scroll from "@/components/UI/scroll/scroll";
 import Additional from "@/components/(servicepages)/8_additional/additional";
+import Head from "next/head";
 
 export async function generateStaticParams() {
     const params = ServicesList.map((service) => ({ slug: service.slug }));

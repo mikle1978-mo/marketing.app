@@ -96,7 +96,7 @@ export default function RootLayout({ children }) {
         sameAs: ["https://www.instagram.com/marketingstark_app/"],
     };
     return (
-        <html lang='en'>
+        <html lang='ru'>
             <head>
                 {/* Add Google Analytics script */}
                 <script
