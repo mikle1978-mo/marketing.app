@@ -58,8 +58,8 @@ export async function generateMetadata({ params }) {
                         url: `${process.env.API_URL}/logo.png`,
                     },
                 },
-                datePublished: item.datePublished,
-                dateModified: item.dateModified,
+                datePublished: item.date,
+                dateModified: item.date,
                 mainEntityOfPage: {
                     "@type": "WebPage",
                     "@id": `${process.env.API_URL}/blog/${item.id}`,

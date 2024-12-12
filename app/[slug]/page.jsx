@@ -64,7 +64,10 @@ export async function generateMetadata({ params }) {
                     "@type": "Place",
                     address: {
                         "@type": "PostalAddress",
-                        addressLocality: "Турция",
+                        addressLocality: "Куздере Кемер Анталия Турция",
+                        addressCountry: "Турция",
+                        streetAddress: "Куздере",
+                        postalCode: "07982",
                     },
                 },
                 serviceType: item.title,
