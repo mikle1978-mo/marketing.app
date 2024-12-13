@@ -60,8 +60,6 @@ export default function ServicePage({ params }) {
 
     const jsonLd = generateSchemaForService(item);
 
-    console.log(jsonLd);
-
     return (
         <>
             <Script

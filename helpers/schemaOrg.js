@@ -27,7 +27,7 @@ export function generateSchemaForService(item) {
             "@context": "https://schema.org",
             "@type": "Product",
             name: item?.title || "Услуга",
-            description: item?.schema_desc || "Описание услуги недоступно",
+            description: item?.meta_desc || "Описание услуги недоступно",
             image:
                 item?.img ||
                 `${
@@ -61,7 +61,7 @@ export function generateSchemaForService(item) {
                     item?.slug || "service"
                 }`,
                 description:
-                    item?.schema_desc || "Описание предложения недоступно",
+                    item?.meta_desc || "Описание предложения недоступно",
                 availability: "https://schema.org/InStock",
             },
             aggregateRating: {
