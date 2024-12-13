@@ -62,7 +62,7 @@ export function generateSchemaForService(item) {
                 }`,
                 description:
                     item?.meta_desc || "Описание предложения недоступно",
-                priceValidUntil: "2025-12-31",
+                priceValidUntil: item?.priceValidUntil || "2025-12-31",
                 availability: "https://schema.org/InStock",
             },
             aggregateRating: {
@@ -128,11 +128,6 @@ export function generateSchemaForArticle(item) {
             },
             description: item.meta_desc || "Описание отсутстует",
             image: item.img || `${process.env.API_URL}/images/default_item.png`,
-            aggregateRating: {
-                "@type": "AggregateRating",
-                ratingValue: "4.8",
-                reviewCount: "25",
-            },
         },
     ];
 
