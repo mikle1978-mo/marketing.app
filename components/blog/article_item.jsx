@@ -24,7 +24,13 @@ export default function ArticleItem({ item }) {
 
             <figcaption className={cl.figcaption}>
                 <h2 className={cl.title}>{item.title}</h2>
-                <span>{item.date}</span>
+                <span>
+                    {new Date(item.date).toLocaleDateString("ru-RU", {
+                        year: "numeric",
+                        month: "long",
+                        day: "numeric",
+                    })}
+                </span>
             </figcaption>
         </figure>
     );

@@ -10,7 +10,14 @@ export default function Article({ item }) {
             <header className={cl.header}>
                 <h1 className={cl.title}>{item.title}</h1>
                 <p className={cl.subtitle}>{item.subtitle}</p>
-                <p className={cl.date}>Дата публикации: {item.date}</p>
+                <p className={cl.date}>
+                    Дата публикации:
+                    {new Date(item.date).toLocaleDateString("ru-RU", {
+                        year: "numeric",
+                        month: "long",
+                        day: "numeric",
+                    })}
+                </p>
             </header>
             <img className={cl.image} src={item.img} alt='Обложка статьи' />
             <section
