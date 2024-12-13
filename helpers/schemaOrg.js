@@ -116,8 +116,12 @@ export function generateSchemaForArticle(item) {
                     url: `${process.env.API_URL}/logo.png`,
                 },
             },
-            datePublished: item.date,
-            dateModified: item.date_modified || null,
+            datePublished: item?.date
+                ? new Date(item.date).toISOString()
+                : new Date().toISOString(),
+            dateModified: item?.date_modified
+                ? new Date(item.date_modified).toISOString()
+                : new Date().toISOString(),
             mainEntityOfPage: {
                 "@type": "WebPage",
                 "@id": `${process.env.API_URL}/blog/${item.id}`,
