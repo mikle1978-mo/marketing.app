@@ -16,7 +16,7 @@ export default function Blog() {
         "@context": "https://schema.org",
         "@type": "Organization",
         name: "Marketing Stark",
-        url: "https://marketingstark.app/blog",
+        url: "https://marketingstark.app",
         logo: "https://marketingstark.app/logo.png",
         description: "Полезные статьи про рекламу MarketingStark",
         address: {

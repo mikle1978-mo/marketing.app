@@ -67,8 +67,8 @@ export default function ArticlePage({ params }) {
                 url: `${process.env.API_URL}/logo.png`,
             },
         },
-        datePublished: item.date,
-        dateModified: item.date,
+        // datePublished: item.date,
+        // dateModified: item.date,
         mainEntityOfPage: {
             "@type": "WebPage",
             "@id": `${process.env.API_URL}/blog/${item.id}`,
