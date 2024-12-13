@@ -10,6 +10,7 @@ import Action from "@/components/(servicepages)/7_action/action";
 import Scroll from "@/components/UI/scroll/scroll";
 import Additional from "@/components/(servicepages)/8_additional/additional";
 import Script from "next/script";
+import { generateSchemaForService } from "@/helpers/schemaOrg";
 
 export async function generateStaticParams() {
     const params = ServicesList.map((service) => ({ slug: service.slug }));
@@ -57,36 +58,7 @@ export default function ServicePage({ params }) {
         (item) => item.slug !== params.slug
     );
 
-    const jsonLd = {
-        "@context": "https://schema.org",
-        "@type": "Service",
-        name: item?.title || "Услуга", // Подстраховка на случай отсутствия данных
-        description: item?.schema_desc || "Описание услуги недоступно",
-        provider: {
-            "@type": "Organization",
-            name: "Marketing Stark",
-            url: process.env.API_URL || "https://example.com", // Подстраховка, если API_URL отсутствует
-            logo: `${process.env.API_URL || "https://example.com"}/logo.png`,
-        },
-        areaServed: {
-            "@type": "Place",
-            address: {
-                "@type": "PostalAddress",
-                addressLocality: "Турция",
-            },
-        },
-        serviceType: item?.title || "Услуга",
-        offers: {
-            "@type": "Offer",
-            priceCurrency: "USD",
-            price: item?.price || "100", // Значение по умолчанию
-            url: `${process.env.API_URL || "https://example.com"}/${
-                item?.slug || "service"
-            }`,
-            description: item?.schema_desc || "Описание предложения недоступно",
-            availability: "https://schema.org/InStock",
-        },
-    };
+    const jsonLd = generateSchemaForService(item);
 
     console.log(jsonLd);
 
