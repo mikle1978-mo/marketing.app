@@ -126,7 +126,7 @@ export function generateSchemaForArticle(item) {
                 "@type": "WebPage",
                 "@id": `${process.env.API_URL}/blog/${item.id}`,
             },
-            description: item.meta_desc || "Описание отсутстует",
+            description: item.meta_desc || "Описание отсутствует",
             image: item.img || `${process.env.API_URL}/images/default_item.png`,
         },
     ];
