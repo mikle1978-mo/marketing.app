@@ -3,6 +3,7 @@ import { ArticlesList } from "@/lib/articles";
 import cl from "./page.module.css";
 import Scroll from "@/components/UI/scroll/scroll";
 import Script from "next/script";
+import { generateSchemaForArticle } from "@/helpers/schemaOrg";
 
 export async function generateStaticParams() {
     const params = ArticlesList.map((article) => ({ id: article.id }));
@@ -33,7 +34,7 @@ export async function generateMetadata({ params }) {
             type: "article",
         },
         twitter: {
-            card: "summary_large_image", // Тип карточки Twitter (рекомендуется для статей)
+            card: "summary_large_image",
             title: item.title,
             description: item.meta_desc,
             image: item.img || `${process.env.API_URL}/images/default_item.png`,
@@ -51,31 +52,7 @@ export default function ArticlePage({ params }) {
         return <p>Статья не найдена</p>;
     }
 
-    const jsonLd = {
-        "@context": "https://schema.org",
-        "@type": "Article",
-        headline: item.title,
-        author: {
-            "@type": "Person",
-            name: item.author || "Автор не указан",
-        },
-        publisher: {
-            "@type": "Organization",
-            name: "MarketingStark",
-            logo: {
-                "@type": "ImageObject",
-                url: `${process.env.API_URL}/logo.png`,
-            },
-        },
-        // datePublished: item.date,
-        // dateModified: item.date,
-        mainEntityOfPage: {
-            "@type": "WebPage",
-            "@id": `${process.env.API_URL}/blog/${item.id}`,
-        },
-        description: item.meta_desc,
-        image: item.img || `${process.env.API_URL}/images/default_item.png`,
-    };
+    const jsonLd = generateSchemaForArticle(item);
 
     return (
         <>
