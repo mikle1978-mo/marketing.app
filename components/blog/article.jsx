@@ -2,6 +2,7 @@
 
 import cl from "./article.module.css";
 import { useRouter } from "next/navigation";
+import Image from "next/image";
 
 export default function Article({ item }) {
     const router = useRouter();
@@ -19,7 +20,19 @@ export default function Article({ item }) {
                     })}
                 </p>
             </header>
-            <img className={cl.image} src={item.img} alt='Обложка статьи' />
+            <div className={cl.imageWrapper}>
+                <Image
+                    className={cl.image}
+                    src={item.img}
+                    alt='Обложка статьи'
+                    fill
+                    priority // Опционально, для оптимизации загрузки
+                    quality={90} // Качество изображения
+                    style={{ objectFit: "cover", borderRadius: "0.5rem" }} // object-fit и стили для адаптации
+                    placeholder='blur' // Эффект размытия при загрузке
+                    blurDataURL={item.img} // URL для размытого изображения
+                />
+            </div>
             <section
                 className={cl.content}
                 dangerouslySetInnerHTML={{ __html: item.html }}
