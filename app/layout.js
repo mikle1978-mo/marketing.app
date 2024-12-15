@@ -7,7 +7,7 @@ import YandexMetrika from "@/components/yandex/metrika";
 export const metadata = {
     metadataBase: new URL(process.env.API_URL),
     title: {
-        default: "Реклама в интернете, контекстная реклама",
+        default: "MarketingStark - все что нужно для интернет рекламы в Турции",
         template: "%s - MarketingStark",
     },
     description:
