@@ -14,6 +14,7 @@ export default function MobNav({ isOpen, closeMenu, toggleOpen }) {
         closeMenu(); // Закрываем мобильное меню
         toggleOpen(); // Открываем модальное окно с формой
     };
+
     const [openSubmenu, setOpenSubmenu] = useState(null);
 
     const toggleSubmenu = (index) => {
@@ -60,7 +61,6 @@ export default function MobNav({ isOpen, closeMenu, toggleOpen }) {
                 </div>
 
                 <ul>
-                    {" "}
                     <li>
                         <Link onClick={closeMenu} href='/'>
                             Главная
@@ -71,10 +71,11 @@ export default function MobNav({ isOpen, closeMenu, toggleOpen }) {
                             key={index}
                             className={openSubmenu === index ? cl.open : ""}
                         >
-                            <span
+                            <button
                                 onClick={() => toggleSubmenu(index)}
                                 aria-expanded={openSubmenu === index}
                                 aria-controls={`submenu-${index}`}
+                                className={cl.submenuButton}
                             >
                                 {item.title}{" "}
                                 <FontAwesomeIcon
@@ -85,8 +86,11 @@ export default function MobNav({ isOpen, closeMenu, toggleOpen }) {
                                             : ""
                                     }
                                 />
-                            </span>
-                            <ul>
+                            </button>
+                            <ul
+                                id={`submenu-${index}`}
+                                hidden={openSubmenu !== index}
+                            >
                                 {item.submenu.map((subitem, subIndex) => (
                                     <li key={subIndex}>
                                         <Link
@@ -99,10 +103,10 @@ export default function MobNav({ isOpen, closeMenu, toggleOpen }) {
                                 ))}
                             </ul>
                         </li>
-                    ))}{" "}
+                    ))}
                     <li>
                         <Link onClick={closeMenu} href='/seo'>
-                            CEO
+                            SEO
                         </Link>
                     </li>
                     <li>

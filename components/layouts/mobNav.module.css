@@ -116,4 +116,21 @@
         margin-top: auto;
         padding: 1rem 0;
     }
+
+    .submenuButton {
+        width: 100%;
+        background: none;
+        border: none;
+        color: inherit;
+        font-size: 1rem;
+        cursor: pointer;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 0;
+        margin: 0;
+    }
+    .submenuButton:focus {
+        outline: none; /* Для того чтобы убрать стандартное оформление при фокусе, можно добавить свой стиль */
+    }
 }
