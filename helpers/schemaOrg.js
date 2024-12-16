@@ -1,5 +1,74 @@
+export const CollectionPage = {
+    "@context": "https://schema.org",
+    "@type": "CollectionPage",
+    name: "Наши услуги",
+    about: [
+        {
+            "@type": "Service",
+            name: "Настройка Google Ads",
+            url: "https://markeitngsrark.app/google_setting",
+        },
+        {
+            "@type": "Service",
+            name: "Ведение Google Ads",
+            url: "https://markeitngsrark.app/google_management",
+        },
+        {
+            "@type": "Service",
+            name: "Опримизация Google Ads",
+            url: "https://markeitngsrark.app/google_optimization",
+        },
+        {
+            "@type": "Service",
+            name: "Аудит Google Ads",
+            url: "https://markeitngsrark.app/google_audit",
+        },
+        {
+            "@type": "Service",
+            name: "Настройка ЯДирект",
+            url: "https://markeitngsrark.app/yandex_setting",
+        },
+        {
+            "@type": "Service",
+            name: "Ведение ЯДирект",
+            url: "https://markeitngsrark.app/yandex_management",
+        },
+        {
+            "@type": "Service",
+            name: "Оптимизация ЯДирект",
+            url: "https://markeitngsrark.app/yandex_optimization",
+        },
+        {
+            "@type": "Service",
+            name: "Аудит ЯДирект",
+            url: "https://markeitngsrark.app/yandex_audit",
+        },
+        {
+            "@type": "Service",
+            name: "Создание лендингов",
+            url: "https://markeitngsrark.app/landing",
+        },
+        {
+            "@type": "Service",
+            name: "Создание сайтов",
+            url: "https://markeitngsrark.app/website",
+        },
+        {
+            "@type": "Service",
+            name: "Создание интернет-магазинов",
+            url: "https://markeitngsrark.app/ecomm",
+        },
+        {
+            "@type": "Service",
+            name: "СЕО оптимизация",
+            url: "https://markeitngsrark.app/seo",
+        },
+    ],
+};
+
 export function generateSchemaForService(item) {
     const schema = [
+        CollectionPage,
         {
             "@context": "https://schema.org",
             "@type": "Organization",
@@ -77,6 +146,7 @@ export function generateSchemaForService(item) {
 }
 export function generateSchemaForArticle(item) {
     const schema = [
+        CollectionPage,
         {
             "@context": "https://schema.org",
             "@type": "Organization",
