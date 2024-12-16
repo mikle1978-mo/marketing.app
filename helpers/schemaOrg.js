@@ -1,3 +1,14 @@
+export const ContactPoint = {
+    "@context": "https://schema.org",
+    "@type": "ContactPoint",
+    email: "StarkMarketing-50@yandex.ru",
+    telephone: "+905356062642",
+    contactType: "Sales",
+    areaServed: "TR",
+    availableLanguage: ["Russian", "English"],
+    sameAs: ["https://wa.me/905356062642", "https://t.me/+905356062642"],
+};
+
 export const CollectionPage = {
     "@context": "https://schema.org",
     "@type": "CollectionPage",
@@ -68,6 +79,7 @@ export const CollectionPage = {
 
 export function generateSchemaForService(item) {
     const schema = [
+        ContactPoint,
         CollectionPage,
         {
             "@context": "https://schema.org",
@@ -146,6 +158,7 @@ export function generateSchemaForService(item) {
 }
 export function generateSchemaForArticle(item) {
     const schema = [
+        ContactPoint,
         CollectionPage,
         {
             "@context": "https://schema.org",

@@ -1,10 +1,11 @@
 import cl from "./page.module.css";
 import MainList from "../components/mainlist/mainlist";
 import Script from "next/script";
-import { CollectionPage } from "@/helpers/schemaOrg";
+import { CollectionPage, ContactPoint } from "@/helpers/schemaOrg";
 
 export default function Home() {
     const jsonLd = [
+        ContactPoint,
         CollectionPage,
         {
             "@context": "https://schema.org",
