@@ -45,7 +45,7 @@ export default function HeadBlock({ item }) {
             <MyModal isOpen={isOpen} toggleOpen={toggleOpen}>
                 <Form
                     onSuccess={handleSuccess}
-                    title={"Получить клиентов"}
+                    title={"Получить консультацию"}
                     button={"Отправить"}
                 />
             </MyModal>
