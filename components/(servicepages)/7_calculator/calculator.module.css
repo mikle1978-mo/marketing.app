@@ -17,13 +17,13 @@
     background-color: var(--foreground);
     display: flex;
     flex-direction: column;
-    height: 100%; /* Позволяет контейнеру занимать всю высоту */
+    height: 80%; /* Позволяет контейнеру занимать всю высоту */
 }
 
 .calculator_container > div:first-child {
     position: sticky;
     top: 0;
-    z-index: 10; /* Чтобы верхний блок был поверх прокручиваемого контента */
+    z-index: 6; /* Чтобы верхний блок был поверх прокручиваемого контента */
     padding: 0.5rem; /* Небольшой отступ снизу */
     box-shadow: var(--boxshadow); /* Тень для разделения */
     border-radius: 0.25rem;
@@ -57,7 +57,7 @@
 .increment_button {
     width: 30px;
     height: 30px;
-    font-size: 20px;
+
     text-align: center;
     line-height: 28px;
     border: none;
@@ -72,7 +72,7 @@
     text-align: center;
     padding: 5px;
     margin: 0 5px;
-    font-size: 16px;
+
     border: 1px solid var(--foreground);
     border-radius: 4px;
 }
