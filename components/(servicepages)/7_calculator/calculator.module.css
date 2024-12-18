@@ -1,7 +1,7 @@
 .section {
     width: 100%;
     padding: 1rem 0;
-    background-color: var(--foreground);
+
     display: flex;
     flex-direction: column;
     gap: 2rem;
@@ -12,9 +12,9 @@
     padding: 0.5rem;
     max-width: 400px;
     margin: auto;
-    border: 1px solid #ddd;
+    border: 1px solid var(--foreground);
     border-radius: 0.5rem;
-    background-color: #fff;
+    background-color: var(--foreground);
     display: flex;
     flex-direction: column;
     height: 100%; /* Позволяет контейнеру занимать всю высоту */
@@ -23,7 +23,6 @@
 .calculator_container > div:first-child {
     position: sticky;
     top: 0;
-    background-color: #fff; /* Убедитесь, что фон соответствует общему */
     z-index: 10; /* Чтобы верхний блок был поверх прокручиваемого контента */
     padding: 0.5rem; /* Небольшой отступ снизу */
     box-shadow: var(--boxshadow); /* Тень для разделения */
@@ -62,29 +61,10 @@
     text-align: center;
     line-height: 28px;
     border: none;
-    background-color: #f0f0f0;
+
     border-radius: 50%;
     cursor: pointer;
     display: inline-block;
-    color: #333;
-}
-
-.decrement_button {
-    background-color: #e0e0e0;
-}
-
-.increment_button {
-    background-color: #e0e0e0;
-}
-
-.decrement_button:hover,
-.increment_button:hover {
-    background-color: #d0d0d0;
-}
-
-.decrement_button:active,
-.increment_button:active {
-    background-color: #b0b0b0;
 }
 
 .input_with_buttons input[type="number"] {
@@ -93,7 +73,7 @@
     padding: 5px;
     margin: 0 5px;
     font-size: 16px;
-    border: 1px solid #ccc;
+    border: 1px solid var(--foreground);
     border-radius: 4px;
 }
 
@@ -102,8 +82,7 @@
     justify-content: space-between;
     margin: 0.5rem;
     padding: 0.5rem;
-    background-color: #f9f9f9;
-    border: 1px solid #ddd;
+    border: 1px solid var(--foreground);
     border-radius: 8px;
 }
 
