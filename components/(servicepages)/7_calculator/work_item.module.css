@@ -1,8 +1,11 @@
 .service_item {
-    margin-bottom: 10px;
+    margin-bottom: 0.5rem;
     display: flex;
     align-items: center;
     justify-content: space-between;
+}
+.service_item > label {
+    text-align: start;
 }
 
 .switch {

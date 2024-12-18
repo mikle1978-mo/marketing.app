@@ -80,10 +80,16 @@
 .total_cost {
     display: flex;
     justify-content: space-between;
+    align-items: center;
     margin: 0.5rem;
     padding: 0.5rem;
     border: 1px solid var(--foreground);
     border-radius: 8px;
+}
+.total_cost_value {
+    background-color: var(--secondary-0);
+    padding: 0.25rem;
+    border-radius: 0.25rem;
 }
 
 .services_list {
