@@ -17,7 +17,7 @@
     background-color: var(--foreground);
     display: flex;
     flex-direction: column;
-    height: 80%; /* Позволяет контейнеру занимать всю высоту */
+    height: 80vh;
 }
 
 .calculator_container > div:first-child {
