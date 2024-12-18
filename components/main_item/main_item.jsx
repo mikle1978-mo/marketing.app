@@ -22,7 +22,7 @@ export default function Main_item({ item }) {
             </div>
 
             <figcaption className={cl.figcaption}>
-                <h2 className={`${cl.title} ${cl.highlight}`}>{item.title}</h2>
+                <h2 className={cl.title}>{item.title}</h2>
                 {/* <div className={cl.desc}>{item.title}</div> */}
             </figcaption>
         </figure>

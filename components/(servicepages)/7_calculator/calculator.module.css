@@ -1,0 +1,113 @@
+.section {
+    width: 100%;
+    padding: 1rem 0;
+    background-color: var(--foreground);
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    text-align: center;
+}
+
+.calculator_container {
+    padding: 0.5rem;
+    max-width: 400px;
+    margin: auto;
+    border: 1px solid #ddd;
+    border-radius: 0.5rem;
+    background-color: #fff;
+    display: flex;
+    flex-direction: column;
+    height: 100%; /* Позволяет контейнеру занимать всю высоту */
+}
+
+.calculator_container > div:first-child {
+    position: sticky;
+    top: 0;
+    background-color: #fff; /* Убедитесь, что фон соответствует общему */
+    z-index: 10; /* Чтобы верхний блок был поверх прокручиваемого контента */
+    padding: 0.5rem; /* Небольшой отступ снизу */
+    box-shadow: var(--boxshadow); /* Тень для разделения */
+    border-radius: 0.25rem;
+}
+
+.services_list {
+    margin-bottom: 0.5rem;
+    max-height: 300px; /* Ограничиваем высоту списка сервисов */
+    overflow-y: auto; /* Добавляем вертикальный скролл */
+    padding-right: 10px; /* Небольшой отступ, чтобы избежать наложения скроллбара */
+}
+
+.input_group {
+    margin-bottom: 0.5rem;
+}
+
+.input_group label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+.input_with_buttons {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.decrement_button,
+.increment_button {
+    width: 30px;
+    height: 30px;
+    font-size: 20px;
+    text-align: center;
+    line-height: 28px;
+    border: none;
+    background-color: #f0f0f0;
+    border-radius: 50%;
+    cursor: pointer;
+    display: inline-block;
+    color: #333;
+}
+
+.decrement_button {
+    background-color: #e0e0e0;
+}
+
+.increment_button {
+    background-color: #e0e0e0;
+}
+
+.decrement_button:hover,
+.increment_button:hover {
+    background-color: #d0d0d0;
+}
+
+.decrement_button:active,
+.increment_button:active {
+    background-color: #b0b0b0;
+}
+
+.input_with_buttons input[type="number"] {
+    width: 50px;
+    text-align: center;
+    padding: 5px;
+    margin: 0 5px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.total_cost {
+    display: flex;
+    justify-content: space-between;
+    margin: 0.5rem;
+    padding: 0.5rem;
+    background-color: #f9f9f9;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+}
+
+.services_list {
+    overflow-y: auto; /* Добавить скролл, если нужно */
+    padding: 1rem 0;
+}

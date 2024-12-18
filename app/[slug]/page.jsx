@@ -6,9 +6,10 @@ import Mistake from "@/components/(servicepages)/3_mistake/mistake";
 import Pain from "@/components/(servicepages)/4_pain/pain";
 import Hope from "@/components/(servicepages)/5_hope/hope";
 import Solution from "@/components/(servicepages)/6_solution/solution";
-import Action from "@/components/(servicepages)/7_action/action";
+import Calculator from "@/components/(servicepages)/7_calculator/calculator";
+import Action from "@/components/(servicepages)/8_action/action";
 import Scroll from "@/components/UI/scroll/scroll";
-import Additional from "@/components/(servicepages)/8_additional/additional";
+import Additional from "@/components/(servicepages)/9_additional/additional";
 import Script from "next/script";
 import { generateSchemaForService } from "@/helpers/schemaOrg";
 
@@ -84,6 +85,9 @@ export default function ServicePage({ params }) {
                     solutions={item?.solutions}
                     title={item?.solution_title}
                 />
+                {item?.works.length > 0 && (
+                    <Calculator works={item?.works} title={item?.works_title} />
+                )}
                 <Action actions={item?.actions} title={item?.action_title} />
                 <Additional
                     additionals={additionals}
