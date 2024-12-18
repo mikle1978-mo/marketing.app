@@ -47,7 +47,7 @@ const Calculator = ({ works, title }) => {
         <section className={cl.section}>
             <h2>Воспользуйтесь калькулятором</h2>
             <span>{title}</span>
-            <MyButton onClick={toggleOpen}> Расчитать</MyButton>
+            <MyButton onClick={toggleOpen}> Рассчитать</MyButton>
             <MyModal isOpen={isOpen} toggleOpen={toggleOpen}>
                 <div className={cl.calculator_container}>
                     <div>
