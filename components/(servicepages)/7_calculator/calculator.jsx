@@ -6,7 +6,7 @@ import WorkItem from "./work_item";
 import MyModal from "@/components/UI/modal/modal";
 import MyButton from "@/components/UI/buttons/myButton";
 
-const Calculator = ({ works, title }) => {
+const Calculator = ({ works, title, desc }) => {
     const [isOpen, setIsOpen] = useState(false);
     const toggleOpen = () => setIsOpen(!isOpen);
 
@@ -45,8 +45,8 @@ const Calculator = ({ works, title }) => {
 
     return (
         <section className={cl.section}>
-            <h2>Воспользуйтесь калькулятором</h2>
-            <span>{title}</span>
+            <h2>{title}</h2>
+            <span className={cl.content} dangerouslySetInnerHTML={{ __html: desc }} />
             <MyButton onClick={toggleOpen}> Рассчитать</MyButton>
             <MyModal isOpen={isOpen} toggleOpen={toggleOpen}>
                 <div className={cl.calculator_container}>

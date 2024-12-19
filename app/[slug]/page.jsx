@@ -86,7 +86,11 @@ export default function ServicePage({ params }) {
                     title={item?.solution_title}
                 />
                 {item?.works.length > 0 && (
-                    <Calculator works={item?.works} title={item?.works_title} />
+                    <Calculator
+                        works={item?.works}
+                        title={item?.works_title}
+                        desc={item?.works_desc}
+                    />
                 )}
                 <Action actions={item?.actions} title={item?.action_title} />
                 <Additional

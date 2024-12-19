@@ -96,3 +96,36 @@
     overflow-y: auto; /* Добавить скролл, если нужно */
     padding: 1rem 0;
 }
+
+.content article {
+    line-height: 1.5;
+    text-align: justify;
+    text-indent: 1rem;
+}
+.content article h3 {
+    line-height: 1.5;
+    text-align: center;
+    text-indent: 1rem;
+    margin: 0.5rem auto;
+}
+.content article > ul > li {
+    list-style: none;
+}
+.content article > a {
+    color: var(--secondary-2) !important; /* Основной цвет ссылки */
+    cursor: pointer; /* Вид курсора */
+    text-decoration: underline !important; /* Подчеркивание */
+    font-weight: bold; /* Дополнительно: можно добавить жирный шрифт */
+    transition: color 0.3s ease; /* Плавный переход цвета при наведении */
+}
+
+.content article > a:hover {
+    color: var(--primary); /* Изменение цвета при наведении */
+    text-decoration: none; /* Убирает подчеркивание при наведении */
+}
+
+@media (max-width: 768px) {
+    .content {
+        font-size: 1rem;
+    }
+}
