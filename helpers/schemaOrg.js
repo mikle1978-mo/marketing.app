@@ -145,6 +145,14 @@ export function generateSchemaForService(item) {
                     item?.meta_desc || "Описание предложения недоступно",
                 priceValidUntil: item?.priceValidUntil || "2025-12-31",
                 availability: "https://schema.org/InStock",
+                hasMerchantReturnPolicy: {
+                    "@type": "MerchantReturnPolicy",
+                    returnPolicyCategory: "NoReturns",
+                },
+                shippingDetails: {
+                    "@type": "OfferShippingDetails",
+                    doesNotShip: true,
+                },
             },
             aggregateRating: {
                 "@type": "AggregateRating",
