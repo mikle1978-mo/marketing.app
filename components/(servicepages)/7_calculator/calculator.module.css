@@ -20,7 +20,13 @@
     height: 80vh;
 }
 
-.calculator_container > div:first-child {
+.calculator_container h3 {
+    font-size: 1rem;
+    margin-bottom: 0.5rem;
+}
+
+.total_wrap {
+    margin-top: 1rem;
     position: sticky;
     top: 0;
     z-index: 6; /* Чтобы верхний блок был поверх прокручиваемого контента */
@@ -31,7 +37,7 @@
 
 .services_list {
     margin-bottom: 0.5rem;
-    max-height: 300px; /* Ограничиваем высоту списка сервисов */
+    /* max-height: 300px; Ограничиваем высоту списка сервисов */
     overflow-y: auto; /* Добавляем вертикальный скролл */
     padding-right: 10px; /* Небольшой отступ, чтобы избежать наложения скроллбара */
 }
@@ -81,10 +87,9 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin: 0.5rem;
     padding: 0.5rem;
     border: 1px solid var(--foreground);
-    border-radius: 8px;
+    border-radius: 0.5rem;
 }
 .total_cost_value {
     background-color: var(--secondary-0);

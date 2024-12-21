@@ -31,27 +31,42 @@ const Calculator = ({ works, title, desc }) => {
         }
 
         const selectedServices = services.filter((service) => service.selected);
-        const serviceCost = selectedServices.reduce(
+        const perCampaignServices = selectedServices.filter(
+            (service) => service.perCampaign
+        );
+        const oneTimeServices = selectedServices.filter(
+            (service) => !service.perCampaign
+        );
+
+        const perCampaignCost = perCampaignServices.reduce(
             (sum, service) => sum + service.costPerUnit,
             0
         );
-        const campaignCost = campaignCount * serviceCost;
+        const oneTimeCost = oneTimeServices.reduce(
+            (sum, service) => sum + service.costPerUnit,
+            0
+        );
 
-        const feePercentage = 0.15; // 15% комиссия за управление
+        const campaignCost = campaignCount * perCampaignCost;
+        const feePercentage = 0.1; // 10% комиссия за управление
         const fee = campaignCost * feePercentage;
-        const total = campaignCost + fee;
+        const total = campaignCost + oneTimeCost + fee;
+
         setTotalCost(total);
-    }, [services, campaignCount]); // Добавляем зависимость от services и campaignCount
+    }, [services, campaignCount]); // Зависимость от services и campaignCount
 
     return (
         <section className={cl.section}>
             <h2>{title}</h2>
-            <span className={cl.content} dangerouslySetInnerHTML={{ __html: desc }} />
+            <span
+                className={cl.content}
+                dangerouslySetInnerHTML={{ __html: desc }}
+            />
             <MyButton onClick={toggleOpen}> Рассчитать</MyButton>
             <MyModal isOpen={isOpen} toggleOpen={toggleOpen}>
                 <div className={cl.calculator_container}>
-                    <div>
-                        <h2>Калькулятор ориентировочной стоимости услуги</h2>
+                    <h2>Калькулятор</h2>
+                    <div className={cl.total_wrap}>
                         {totalCost > 0 && (
                             <div className={cl.total_cost}>
                                 <p>Стоимость:</p>
@@ -60,6 +75,19 @@ const Calculator = ({ works, title, desc }) => {
                                 </p>
                             </div>
                         )}
+                    </div>
+                    <div className={cl.services_list}>
+                        <h3>Общие работы</h3>
+                        {services
+                            .filter((service) => !service.perCampaign)
+                            .map((service) => (
+                                <WorkItem
+                                    key={service.id}
+                                    service={service}
+                                    onToggle={toggleService}
+                                />
+                            ))}
+                        <h3>Работы за каждую кампанию</h3>
                         <div className={cl.input_group}>
                             <label htmlFor='campaignCount'>
                                 Количество кампаний:
@@ -99,15 +127,15 @@ const Calculator = ({ works, title, desc }) => {
                                 </button>
                             </div>
                         </div>
-                    </div>
-                    <div className={cl.services_list}>
-                        {services.map((service) => (
-                            <WorkItem
-                                key={service.id}
-                                service={service}
-                                onToggle={toggleService}
-                            />
-                        ))}
+                        {services
+                            .filter((service) => service.perCampaign)
+                            .map((service) => (
+                                <WorkItem
+                                    key={service.id}
+                                    service={service}
+                                    onToggle={toggleService}
+                                />
+                            ))}
                     </div>
                 </div>
             </MyModal>
