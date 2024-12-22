@@ -96,7 +96,6 @@ export default function MobNav({ isOpen, closeMenu, toggleOpen }) {
                                         <Link
                                             onClick={closeMenu}
                                             href={subitem.link}
-                                            rel='nofollow'
                                         >
                                             {subitem.title}
                                         </Link>
@@ -106,12 +105,12 @@ export default function MobNav({ isOpen, closeMenu, toggleOpen }) {
                         </li>
                     ))}
                     <li>
-                        <Link onClick={closeMenu} href='/seo' rel='nofollow'>
+                        <Link onClick={closeMenu} href='/seo'>
                             SEO
                         </Link>
                     </li>
                     <li>
-                        <Link onClick={closeMenu} href='/blog' rel='nofollow'>
+                        <Link onClick={closeMenu} href='/blog'>
                             Блог
                         </Link>
                     </li>
