@@ -3,7 +3,7 @@ import cl from "./logo.module.css";
 
 export default function Logo() {
     return (
-        <Link className={cl.logo} href='/'>
+        <Link className={cl.logo} rel='nofollow' href='/'>
             {/* <Image
         className={cl.logo_img}
         src='/logo.png'

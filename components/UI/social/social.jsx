@@ -1,13 +1,8 @@
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import {
-    faPhone,
-    faSquareEnvelope,
-    faSquarePhoneFlip,
-} from "@fortawesome/free-solid-svg-icons";
+import { faSquarePhoneFlip } from "@fortawesome/free-solid-svg-icons";
 import {
     faTelegram,
     faWhatsapp,
-    faTwitter,
     faInstagram,
 } from "@fortawesome/free-brands-svg-icons";
 import cl from "./social.module.css";
@@ -19,6 +14,7 @@ export default function Social() {
                 href='tel:+905356062642'
                 className={cl.link}
                 aria-label='Позвонить: +905356062642'
+                rel='nofollow'
             >
                 <FontAwesomeIcon
                     className={cl.icons}
@@ -30,6 +26,7 @@ export default function Social() {
                 href='https://wa.me/905356062642'
                 className={cl.link}
                 aria-label='Ватсап: +905356062642'
+                rel='nofollow'
             >
                 <FontAwesomeIcon
                     className={cl.icons}
@@ -52,6 +49,7 @@ export default function Social() {
                 href='https://t.me/+905356062642'
                 className={cl.link}
                 aria-label='Телеграмм: +905356062642'
+                rel='nofollow'
             >
                 <FontAwesomeIcon
                     className={cl.icons}
@@ -63,6 +61,7 @@ export default function Social() {
                 href='https://www.instagram.com/marketingstark_app/'
                 className={cl.link}
                 aria-label='Инстаграм: https://www.instagram.com/marketingstark_app/'
+                rel='nofollow'
             >
                 <FontAwesomeIcon
                     className={cl.icons}

@@ -62,7 +62,7 @@ export default function MobNav({ isOpen, closeMenu, toggleOpen }) {
 
                 <ul>
                     <li>
-                        <Link onClick={closeMenu} href='/'>
+                        <Link onClick={closeMenu} href='/' rel='nofollow'>
                             Главная
                         </Link>
                     </li>
@@ -96,6 +96,7 @@ export default function MobNav({ isOpen, closeMenu, toggleOpen }) {
                                         <Link
                                             onClick={closeMenu}
                                             href={subitem.link}
+                                            rel='nofollow'
                                         >
                                             {subitem.title}
                                         </Link>
@@ -105,12 +106,12 @@ export default function MobNav({ isOpen, closeMenu, toggleOpen }) {
                         </li>
                     ))}
                     <li>
-                        <Link onClick={closeMenu} href='/seo'>
+                        <Link onClick={closeMenu} href='/seo' rel='nofollow'>
                             SEO
                         </Link>
                     </li>
                     <li>
-                        <Link onClick={closeMenu} href='/blog'>
+                        <Link onClick={closeMenu} href='/blog' rel='nofollow'>
                             Блог
                         </Link>
                     </li>

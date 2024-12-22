@@ -27,12 +27,20 @@ export default function Footer() {
                             <h3 className={cl.title}>Документы</h3>
                             <ul className={cl.bottom_item}>
                                 <li>
-                                    <Link href='/blog' className={cl.link}>
+                                    <Link
+                                        href='/blog'
+                                        className={cl.link}
+                                        rel='nofollow'
+                                    >
                                         Блог
                                     </Link>
                                 </li>
                                 <li>
-                                    <Link href='/privacy' className={cl.link}>
+                                    <Link
+                                        href='/privacy'
+                                        className={cl.link}
+                                        rel='nofollow'
+                                    >
                                         Персональные данные
                                     </Link>
                                 </li>
@@ -40,6 +48,7 @@ export default function Footer() {
                                     <Link
                                         href='/price_list'
                                         className={cl.link}
+                                        rel='nofollow'
                                     >
                                         Тарифы
                                     </Link>
@@ -67,6 +76,7 @@ export default function Footer() {
                                         href='mailto:moygromov19@gmail.com?subject=Important-mail:&body=Hello.'
                                         type='email'
                                         className={cl.link}
+                                        rel='nofollow'
                                     >
                                         email: StarkMarketing-50@yandex.ru
                                     </Link>
