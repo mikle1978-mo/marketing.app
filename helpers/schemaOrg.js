@@ -147,7 +147,8 @@ export function generateSchemaForService(item) {
                 availability: "https://schema.org/InStock",
                 hasMerchantReturnPolicy: {
                     "@type": "MerchantReturnPolicy",
-                    returnPolicyCategory: "NoReturns",
+                    returnPolicyCategory: "https://schema.org/NoRefunds",
+                    applicableCountry: ["TR", "RU"],
                 },
                 shippingDetails: {
                     "@type": "OfferShippingDetails",
