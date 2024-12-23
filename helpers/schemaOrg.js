@@ -76,7 +76,6 @@ export const CollectionPage = {
         },
     ],
 };
-
 export function generateSchemaForService(item) {
     const schema = [
         ContactPoint,
@@ -88,7 +87,7 @@ export function generateSchemaForService(item) {
             url: "https://marketingstark.app",
             logo: "https://marketingstark.app/logo.png",
             description:
-                "Настройка рекламы в Yandex Direct, Google Ads, Яндекс Директ, Гугл Адс. Настройка контекстной рекламы. Ведение, оптимизация, аудит рекламных кампаний. CEO, СЕО оптимизация, разработка продающих лендингов, сайтов и сайтов для интернет магазинов",
+                "Настройка рекламы в Yandex Direct, Google Ads, Яндекс Директ, Гугл Адс. Настройка контекстной рекламы. Ведение, оптимизация, аудит рекламных кампаний. SEO, СЕО оптимизация, разработка продающих лендингов, сайтов и интернет-магазинов",
             address: {
                 "@type": "PostalAddress",
                 addressLocality: "Кемер, Aнталия, Турция",
@@ -116,24 +115,8 @@ export function generateSchemaForService(item) {
                 }/default_item.png`,
             brand: {
                 "@type": "Brand",
-                name: "MarketingStark",
-            },
-            provider: {
-                "@type": "Organization",
                 name: "Marketing Stark",
-                url: process.env.API_URL || "https://example.com",
-                logo: `${
-                    process.env.API_URL || "https://example.com"
-                }/logo.png`,
             },
-            areaServed: {
-                "@type": "Place",
-                address: {
-                    "@type": "PostalAddress",
-                    addressLocality: "Турция",
-                },
-            },
-            serviceType: item?.title || "Товар",
             offers: {
                 "@type": "Offer",
                 priceCurrency: item?.currency || "USD",
@@ -165,6 +148,7 @@ export function generateSchemaForService(item) {
 
     return schema;
 }
+
 export function generateSchemaForArticle(item) {
     const schema = [
         ContactPoint,
