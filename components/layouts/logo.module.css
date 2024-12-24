@@ -28,8 +28,8 @@
     ); /* Если внутренний текст также должен измениться */
 }
 
-/* @media (max-width: 570px) {
+@media (max-width: 570px) {
     .logo_title {
         display: none;
     }
-} */
+}

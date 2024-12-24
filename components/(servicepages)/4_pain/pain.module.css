@@ -63,12 +63,8 @@
     position: absolute;
     width: 2rem;
     height: 2rem;
-    top: 0.5rem;
-    left: 0.5rem;
-    font-size: 1.8rem;
-    border: 2px solid var(--background);
     background-color: var(--foreground);
-    border-radius: 50%;
+    border-radius: 0.25rem;
     display: flex;
     align-items: center;
     justify-content: space-around;
