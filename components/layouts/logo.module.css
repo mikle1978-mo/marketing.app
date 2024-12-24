@@ -8,7 +8,7 @@
 }
 .logo:hover {
     transform: scale(1.005);
-    text-shadow: var(--text-shadow);
+    color: var(--secondary-1);
 }
 
 .logo_img {
@@ -19,10 +19,17 @@
     border: 2px solid var(--background);
     text-align: center;
     font-weight: bolder;
+    transition: all 0.3s ease-in;
+}
+.logo:hover .logo_img {
+    border: 2px solid var(--secondary-1);
+    color: var(
+        --secondary-1
+    ); /* Если внутренний текст также должен измениться */
 }
 
-@media (max-width: 570px) {
+/* @media (max-width: 570px) {
     .logo_title {
         display: none;
     }
-}
+} */
