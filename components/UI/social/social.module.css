@@ -12,8 +12,7 @@
 }
 
 .icons:hover {
-    transform: scale(1.05);
-    filter: drop-shadow(0px 0px 5px var(--background));
+    transform: scale(1.1);
 }
 
 .link {
