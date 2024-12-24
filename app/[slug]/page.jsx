@@ -92,7 +92,11 @@ export default function ServicePage({ params }) {
                         desc={item?.works_desc}
                     />
                 )}
-                <Action actions={item?.actions} title={item?.action_title} />
+                <Action
+                    actions={item?.actions}
+                    title={item?.action_title}
+                    form_title={item.bottom_form_title}
+                />
                 <Additional
                     additionals={additionals}
                     title={"Вам также может понадобиться"}

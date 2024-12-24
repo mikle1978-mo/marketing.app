@@ -37,7 +37,9 @@ export default function HeadBlock({ item }) {
                 <div className={cl.form_wrapper}>
                     <Form
                         onSuccess={handleSuccess}
-                        title={"Получить клиентов"}
+                        title={
+                            item?.top_form_title || "Получить обратный звонок"
+                        }
                         button={"Заказать"}
                     />
                 </div>

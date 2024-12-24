@@ -5,7 +5,7 @@ import MyModal from "@/components/UI/modal/modal";
 import Form from "@/components/UI/forms/form";
 import { useState } from "react";
 
-export default function Action({ actions, title }) {
+export default function Action({ actions, title, form_title }) {
     const [isOpen, setIsOpen] = useState(false);
     const toggleOpen = () => setIsOpen(!isOpen);
     const handleSuccess = () => {
@@ -22,7 +22,7 @@ export default function Action({ actions, title }) {
                 <div className={cl.form_wrapper}>
                     <Form
                         onSuccess={handleSuccess}
-                        title={"Получить клиентов"}
+                        title={form_title || "Получить обратный звонок"}
                         button={"Заказать"}
                     />
                 </div>
