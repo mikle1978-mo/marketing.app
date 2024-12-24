@@ -4,6 +4,7 @@ import cl from "./page.module.css";
 import Scroll from "@/components/UI/scroll/scroll";
 import Script from "next/script";
 import { generateSchemaForArticle } from "@/helpers/schemaOrg";
+import { notFound } from "next/navigation";
 
 export async function generateStaticParams() {
     const params = ArticlesList.map((article) => ({ id: article.id }));
@@ -49,7 +50,7 @@ export async function generateMetadata({ params }) {
 export default function ArticlePage({ params }) {
     const item = ArticlesList.find((item) => item.id === params.id);
     if (!item) {
-        return <p>Статья не найдена</p>;
+        notFound();
     }
 
     const jsonLd = generateSchemaForArticle(item);

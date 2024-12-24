@@ -12,6 +12,7 @@ import Scroll from "@/components/UI/scroll/scroll";
 import Additional from "@/components/(servicepages)/9_additional/additional";
 import Script from "next/script";
 import { generateSchemaForService } from "@/helpers/schemaOrg";
+import { notFound } from "next/navigation";
 
 export async function generateStaticParams() {
     const params = ServicesList.map((service) => ({ slug: service.slug }));
@@ -55,6 +56,11 @@ export async function generateMetadata({ params }) {
 
 export default function ServicePage({ params }) {
     const item = ServicesList.find((item) => item.slug === params.slug);
+
+    if (!item) {
+        notFound();
+    }
+
     const additionals = ServicesList.filter(
         (item) => item.slug !== params.slug
     );
