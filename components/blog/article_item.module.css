@@ -18,14 +18,14 @@
 }
 
 .figure:hover {
-    transform: scale(1.01); /* Увеличение изображения на 5% */
-    filter: grayscale(80%);
     transition: transform 1s ease; /* Плавный переход */
 }
 .img_wrapper {
     width: 100%;
     aspect-ratio: 16/9;
     position: relative;
+    overflow: hidden;
+    transition: all 0.5s;
 }
 
 .img {
@@ -34,6 +34,10 @@
     object-fit: cover;
     border-radius: 0.25rem;
     z-index: 1;
+    transition: all 0.5s;
+}
+.img:hover {
+    transform: scale(1.2);
 }
 
 .figcaption {
