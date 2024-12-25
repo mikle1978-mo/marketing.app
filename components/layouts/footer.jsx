@@ -73,7 +73,7 @@ export default function Footer() {
                                 </li>
                                 <li>
                                     <Link
-                                        href='mailto:moygromov19@gmail.com?subject=Important-mail:&body=Hello.'
+                                        href='mailto:starkmarketing-50@yandex.ru?subject=Important-mail:&body=Hello.'
                                         type='email'
                                         className={cl.link}
                                         rel='nofollow'
