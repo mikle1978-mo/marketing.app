@@ -48,15 +48,28 @@
     text-align: justify;
     text-indent: 1rem;
 }
+
 .content article h2 {
     line-height: 1.5;
     text-align: center;
     text-indent: 1rem;
     margin: 0.5rem auto;
 }
+
 .content article > ul > li {
     list-style: none;
 }
+.content article > ul > ul > li {
+    list-style: none;
+}
+.content article > ul > ol > li {
+    list-style-position: inside;
+}
+
+.content article > ol > li {
+    list-style-position: inside;
+}
+
 .content article > a {
     color: var(--secondary-2) !important; /* Основной цвет ссылки */
     cursor: pointer; /* Вид курсора */
