@@ -2,7 +2,7 @@ import Additional from "@/components/(servicepages)/9_additional/additional";
 import { ServicesList } from "@/lib/services";
 import Link from "next/link";
 
-export default function NotFound() {
+export default function NotFoundPage() {
     const additionals = ServicesList;
     return (
         <>

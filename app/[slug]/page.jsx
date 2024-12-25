@@ -16,6 +16,7 @@ import { notFound } from "next/navigation";
 
 export async function generateStaticParams() {
     const params = ServicesList.map((service) => ({ slug: service.slug }));
+
     return params;
 }
 
@@ -29,6 +30,8 @@ export async function generateMetadata({ params }) {
             keywords: "Not found",
         };
     }
+
+    console.log("Метаданные статьи: ", item);
 
     return {
         metadataBase: new URL(process.env.API_URL),
@@ -54,7 +57,7 @@ export async function generateMetadata({ params }) {
     };
 }
 
-export default function ServicePage({ params }) {
+export default async function ServicePage({ params }) {
     const item = ServicesList.find((item) => item.slug === params.slug);
 
     if (!item) {

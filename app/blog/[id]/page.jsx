@@ -8,6 +8,7 @@ import { notFound } from "next/navigation";
 
 export async function generateStaticParams() {
     const params = ArticlesList.map((article) => ({ id: article.id }));
+
     return params;
 }
 
