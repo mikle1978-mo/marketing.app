@@ -31,8 +31,6 @@ export async function generateMetadata({ params }) {
         };
     }
 
-    console.log("Метаданные статьи: ", item);
-
     return {
         metadataBase: new URL(process.env.API_URL),
         title: item.title,

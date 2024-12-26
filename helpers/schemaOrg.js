@@ -17,42 +17,42 @@ export const CollectionPage = {
         {
             "@type": "Service",
             name: "Настройка Google Ads",
-            url: "https://markeitngsrark.app/google_setting",
+            url: "https://markeitngsrark.app/google-setting",
         },
         {
             "@type": "Service",
             name: "Ведение Google Ads",
-            url: "https://markeitngsrark.app/google_management",
+            url: "https://markeitngsrark.app/google-management",
         },
         {
             "@type": "Service",
             name: "Опримизация Google Ads",
-            url: "https://markeitngsrark.app/google_optimization",
+            url: "https://markeitngsrark.app/google-optimization",
         },
         {
             "@type": "Service",
             name: "Аудит Google Ads",
-            url: "https://markeitngsrark.app/google_audit",
+            url: "https://markeitngsrark.app/google-audit",
         },
         {
             "@type": "Service",
             name: "Настройка ЯДирект",
-            url: "https://markeitngsrark.app/yandex_setting",
+            url: "https://markeitngsrark.app/yandex-setting",
         },
         {
             "@type": "Service",
             name: "Ведение ЯДирект",
-            url: "https://markeitngsrark.app/yandex_management",
+            url: "https://markeitngsrark.app/yandex-management",
         },
         {
             "@type": "Service",
             name: "Оптимизация ЯДирект",
-            url: "https://markeitngsrark.app/yandex_optimization",
+            url: "https://markeitngsrark.app/yandex-optimization",
         },
         {
             "@type": "Service",
             name: "Аудит ЯДирект",
-            url: "https://markeitngsrark.app/yandex_audit",
+            url: "https://markeitngsrark.app/yandex-audit",
         },
         {
             "@type": "Service",

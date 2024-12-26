@@ -25,19 +25,19 @@ export default function MobNav({ isOpen, closeMenu, toggleOpen }) {
         {
             title: "Реклама Google",
             submenu: [
-                { title: "Настройка", link: "/google_setting" },
-                { title: "Ведение", link: "/google_management" },
-                { title: "Оптимизация", link: "/google_optimization" },
-                { title: "Аудит", link: "/google_audit" },
+                { title: "Настройка", link: "/google-setting" },
+                { title: "Ведение", link: "/google-management" },
+                { title: "Оптимизация", link: "/google-optimization" },
+                { title: "Аудит", link: "/google-audit" },
             ],
         },
         {
             title: "Реклама Yandex",
             submenu: [
-                { title: "Настройка", link: "/yandex_setting" },
-                { title: "Ведение", link: "/yandex_management" },
-                { title: "Оптимизация", link: "/yandex_optimization" },
-                { title: "Аудит", link: "/yandex_audit" },
+                { title: "Настройка", link: "/yandex-setting" },
+                { title: "Ведение", link: "/yandex-management" },
+                { title: "Оптимизация", link: "/yandex-optimization" },
+                { title: "Аудит", link: "/yandex-audit" },
             ],
         },
         {
