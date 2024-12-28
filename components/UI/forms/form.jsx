@@ -37,7 +37,7 @@ export default function Form({ onSuccess, title, button }) {
 
     return (
         <form className={cl.form} ref={formRef} onSubmit={handleSubmit}>
-            <h2 className={cl.form_title}>{title}</h2>
+            <p className={cl.form_title}>{title}</p>
             <div className={cl.input_wrapper}>
                 <input
                     type='hidden'
