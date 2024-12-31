@@ -55,6 +55,12 @@
     text-indent: 1rem;
     margin: 0.5rem auto;
 }
+.content article h3 {
+    display: inline-block;
+    line-height: 1.5;
+    text-align: center;
+    text-indent: 1rem;
+}
 
 .content article > ul > li {
     list-style: none;
