@@ -8,11 +8,12 @@ import Copyright from "../copyright/copyright";
 import { useState } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faChevronDown } from "@fortawesome/free-solid-svg-icons";
+import menuItems from "@/lib/nav";
 
 export default function MobNav({ isOpen, closeMenu, toggleOpen }) {
     const handleOrderClick = () => {
-        closeMenu(); // Закрываем мобильное меню
-        toggleOpen(); // Открываем модальное окно с формой
+        closeMenu();
+        toggleOpen();
     };
 
     const [openSubmenu, setOpenSubmenu] = useState(null);
@@ -20,35 +21,6 @@ export default function MobNav({ isOpen, closeMenu, toggleOpen }) {
     const toggleSubmenu = (index) => {
         setOpenSubmenu((prevState) => (prevState === index ? null : index));
     };
-
-    const menuItems = [
-        {
-            title: "Реклама Google",
-            submenu: [
-                { title: "Настройка", link: "/google-setting" },
-                { title: "Ведение", link: "/google-management" },
-                { title: "Оптимизация", link: "/google-optimization" },
-                { title: "Аудит", link: "/google-audit" },
-            ],
-        },
-        {
-            title: "Реклама Yandex",
-            submenu: [
-                { title: "Настройка", link: "/yandex-setting" },
-                { title: "Ведение", link: "/yandex-management" },
-                { title: "Оптимизация", link: "/yandex-optimization" },
-                { title: "Аудит", link: "/yandex-audit" },
-            ],
-        },
-        {
-            title: "Разработка сайтов",
-            submenu: [
-                { title: "Лендинги", link: "/landing" },
-                { title: "Сайты", link: "/website" },
-                { title: "Магазины", link: "/ecomm" },
-            ],
-        },
-    ];
 
     return (
         <>
@@ -61,59 +33,59 @@ export default function MobNav({ isOpen, closeMenu, toggleOpen }) {
                 </div>
 
                 <ul>
-                    <li>
-                        <Link onClick={closeMenu} href='/' rel='nofollow'>
-                            Главная
-                        </Link>
-                    </li>
                     {menuItems.map((item, index) => (
                         <li
                             key={index}
                             className={openSubmenu === index ? cl.open : ""}
                         >
-                            <button
-                                onClick={() => toggleSubmenu(index)}
-                                aria-expanded={openSubmenu === index}
-                                aria-controls={`submenu-${index}`}
-                                className={cl.submenuButton}
-                            >
-                                {item.title}{" "}
-                                <FontAwesomeIcon
-                                    icon={faChevronDown}
-                                    className={
-                                        openSubmenu === index
-                                            ? cl.icon_open
-                                            : ""
-                                    }
-                                />
-                            </button>
-                            <ul
-                                id={`submenu-${index}`}
-                                hidden={openSubmenu !== index}
-                            >
-                                {item.submenu.map((subitem, subIndex) => (
-                                    <li key={subIndex}>
-                                        <Link
-                                            onClick={closeMenu}
-                                            href={subitem.link}
-                                        >
-                                            {subitem.title}
-                                        </Link>
-                                    </li>
-                                ))}
-                            </ul>
+                            {item.submenu ? (
+                                <>
+                                    <button
+                                        onClick={() => toggleSubmenu(index)}
+                                        aria-expanded={openSubmenu === index}
+                                        aria-controls={`submenu-${index}`}
+                                        className={cl.submenuButton}
+                                    >
+                                        {item.title}
+                                        <FontAwesomeIcon
+                                            icon={faChevronDown}
+                                            className={
+                                                openSubmenu === index
+                                                    ? cl.icon_open
+                                                    : ""
+                                            }
+                                        />
+                                    </button>
+                                    <ul
+                                        id={`submenu-${index}`}
+                                        hidden={openSubmenu !== index}
+                                    >
+                                        {item.submenu.map(
+                                            (subitem, subIndex) => (
+                                                <li key={subIndex}>
+                                                    <Link
+                                                        onClick={closeMenu}
+                                                        href={subitem.link}
+                                                        rel={item.rel}
+                                                    >
+                                                        {subitem.title}
+                                                    </Link>
+                                                </li>
+                                            )
+                                        )}
+                                    </ul>
+                                </>
+                            ) : (
+                                <Link
+                                    onClick={closeMenu}
+                                    href={item.link}
+                                    rel={item.rel}
+                                >
+                                    {item.title}
+                                </Link>
+                            )}
                         </li>
                     ))}
-                    <li>
-                        <Link onClick={closeMenu} href='/seo'>
-                            SEO
-                        </Link>
-                    </li>
-                    <li>
-                        <Link onClick={closeMenu} href='/blog'>
-                            Блог
-                        </Link>
-                    </li>
                 </ul>
 
                 <div className={cl.socials_wrapper}>
