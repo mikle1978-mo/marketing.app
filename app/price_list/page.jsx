@@ -23,10 +23,10 @@ export default function PriceList() {
                             Услуга
                         </th>
                         <th scope='col' className={cl.head_item}>
-                            Цена (от){" "}
+                            Цена $ (от){" "}
                         </th>
                         <th scope='col' className={cl.head_item}>
-                            Старая цена{" "}
+                            Старая цена ${" "}
                         </th>
                         <th scope='col' className={cl.head_item}>
                             Срок <span>(раб.дн)</span>{" "}
