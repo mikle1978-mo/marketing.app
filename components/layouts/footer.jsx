@@ -78,14 +78,14 @@ export default function Footer() {
                                         className={cl.link}
                                         rel='nofollow'
                                     >
-                                        email: StarkMarketing-50@yandex.ru
+                                        email: starkmarketing-50@yandex.ru
                                     </Link>
                                 </li>
 
                                 <li>
-                                    <p>
+                                    <address>
                                         адрес: Куздере, Кемер, Анталия, Турция
-                                    </p>
+                                    </address>
                                 </li>
                             </ul>
                         </div>
