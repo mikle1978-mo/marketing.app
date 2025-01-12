@@ -1,6 +1,6 @@
 .whatsapp {
     position: fixed;
-    top: 50%;
+    top: 200px;
     right: 0;
     display: flex;
     align-items: center;
@@ -12,7 +12,6 @@
     padding: 0.5rem;
     border-radius: 0 0.5rem 0.5rem 0;
     transform: rotateZ(180deg);
-    translate: 0 -50%;
 }
 .icons {
     font-size: 1rem;
