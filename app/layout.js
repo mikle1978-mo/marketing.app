@@ -3,6 +3,7 @@ import "./globals.css";
 import Header from "@/components/layouts/header";
 import Footer from "@/components/layouts/footer";
 import YandexMetrika from "@/components/yandex/metrika";
+import WhatsApp from "@/components/UI/whatsapp/whatsapp";
 
 export const metadata = {
     metadataBase: new URL(process.env.API_URL),
@@ -107,6 +108,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
                 </noscript>
                 {/* End Google Tag Manager (noscript) */}
                 <Header />
+                <WhatsApp />
                 <div className='container'>{children}</div>
                 <Footer />
             </body>
