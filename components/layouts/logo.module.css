@@ -7,25 +7,50 @@
     transition: all 0.3s ease-in;
 }
 .logo:hover {
-    transform: scale(1.005);
     color: var(--secondary-1);
 }
 
-.logo_img {
-    width: 2.5rem;
-    height: 2.5rem;
-    text-transform: uppercase;
+.img,
+.img2,
+.img3,
+.img4,
+.img5 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
     border-radius: 50%;
-    border: 2px solid var(--background);
-    text-align: center;
-    font-weight: bolder;
     transition: all 0.3s ease-in;
 }
-.logo:hover .logo_img {
-    border: 2px solid var(--secondary-1);
-    color: var(
-        --secondary-1
-    ); /* Если внутренний текст также должен измениться */
+.img {
+    width: 2.5rem;
+    height: 2.5rem;
+    background-color: var(--secondary-1);
+}
+.img2 {
+    width: 2rem;
+    height: 2rem;
+    background-color: var(--foreground);
+}
+
+.img3 {
+    width: 1.5rem;
+    height: 1.5rem;
+    background-color: var(--secondary-1);
+}
+.img4 {
+    width: 1rem;
+    height: 1rem;
+    background-color: var(--foreground);
+}
+.img5 {
+    width: 0.5rem;
+    height: 0.5rem;
+    background-color: var(--secondary-1);
+}
+.logo:hover .img,
+.logo:hover .img3,
+.logo:hover .img5 {
+    background-color: var(--background);
 }
 
 @media (max-width: 570px) {
