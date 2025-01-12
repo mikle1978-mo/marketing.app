@@ -23,7 +23,7 @@ export default function Social() {
                 />
             </a>
             <a
-                href='https://wa.me/905356062642'
+                href='https://wa.me/message/P3KXH7AFMVV4C1'
                 className={cl.link}
                 aria-label='Ватсап: +905356062642'
                 rel='nofollow'
