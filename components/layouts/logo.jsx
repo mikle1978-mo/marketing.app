@@ -11,16 +11,15 @@ export default function Logo() {
         width={96}
         height={96}
     /> */}
-            <span className={cl.img}>
-                <p className={cl.img2}>
-                    <p className={cl.img3}>
-                        <p className={cl.img4}>
-                            {" "}
-                            <p className={cl.img5}></p>
-                        </p>
-                    </p>
-                </p>
-            </span>
+            <div className={cl.img}>
+                <div className={cl.img2}>
+                    <div className={cl.img3}>
+                        <div className={cl.img4}>
+                            <div className={cl.img5}></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
             <span className={cl.logo_title}>Marketing Stark</span>
         </Link>
     );
