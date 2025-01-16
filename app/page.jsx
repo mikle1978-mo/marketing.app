@@ -40,7 +40,7 @@ export default function Home() {
             />
             <main className={cl.main}>
                 <div className={cl.title}>
-                    <h1>Цифровой маркетинг для всех</h1>
+                    <h1>Цифровой маркетинг для бизнеса</h1>
                     <p>- всё, что нужно для интернет продвижения</p>
                 </div>
                 <MainList />

@@ -1,4 +1,3 @@
-import localFont from "next/font/local";
 import "./globals.css";
 import Header from "@/components/layouts/header";
 import Footer from "@/components/layouts/footer";
