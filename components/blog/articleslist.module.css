@@ -1,6 +1,16 @@
-.articles_list {
+/* .articles_list {
     display: flex;
     flex-wrap: wrap;
     gap: 1rem;
     justify-content: space-evenly;
+} */
+
+.articles_list {
+    display: grid;
+    grid-template-columns: repeat(
+        auto-fit,
+        minmax(300px, 1fr)
+    ); /* Карточки от 300px до равномерного распределения */
+    gap: 1rem; /* Промежуток между карточками */
+    justify-content: center; /* Выравнивание карточек по центру */
 }
