@@ -5,7 +5,7 @@
     display: flex;
     align-items: center;
     gap: 0.5rem;
-    background-color: var(--secondary-0);
+    background-color: #14662b;
     z-index: 4;
     color: var(--primary);
     writing-mode: vertical-rl;
@@ -19,8 +19,8 @@
 }
 
 .lamp {
-    width: 8px;
-    height: 8px;
+    width: 9px;
+    height: 9px;
     background-color: red;
     border-radius: 50%;
     animation: blink 0.4s infinite alternate;
@@ -28,9 +28,11 @@
 
 @keyframes blink {
     0% {
-        background-color: red;
+        background-color: darkred;
+        transform: scale(1);
     }
     100% {
-        background-color: darkred;
+        background-color: red;
+        transform: scale(1.3);
     }
 }
