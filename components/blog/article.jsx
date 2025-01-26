@@ -1,11 +1,8 @@
-"use client";
-
 import cl from "./article.module.css";
-import { useRouter } from "next/navigation";
 import Image from "next/image";
+import Link from "next/link";
 
 export default function Article({ item }) {
-    const router = useRouter();
     return (
         <article className={cl.article}>
             <header className={cl.header}>
@@ -37,9 +34,9 @@ export default function Article({ item }) {
                 className={cl.content}
                 dangerouslySetInnerHTML={{ __html: item.html }}
             ></section>
-            <span onClick={() => router.back()} className={cl.goback}>
+            <Link href='/blog' className={cl.goback}>
                 ⬅ назад
-            </span>
+            </Link>
         </article>
     );
 }
