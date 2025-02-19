@@ -21,6 +21,8 @@ export default function Footer() {
                             role='img'
                             xmlns='http://www.w3.org/2000/svg'
                             viewBox='0 0 384 512'
+                            width='2.5rem'
+                            height='2.5rem'
                         >
                             <path
                                 fill='currentColor'
@@ -76,6 +78,8 @@ export default function Footer() {
                             role='img'
                             xmlns='http://www.w3.org/2000/svg'
                             viewBox='0 0 512 512'
+                            width='2.5rem'
+                            height='2.5rem'
                         >
                             <path
                                 fill='currentColor'
@@ -120,6 +124,8 @@ export default function Footer() {
                             role='img'
                             xmlns='http://www.w3.org/2000/svg'
                             viewBox='0 0 512 512'
+                            width='2.5rem'
+                            height='2.5rem'
                         >
                             <path
                                 fill='currentColor'
