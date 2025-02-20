@@ -6,14 +6,20 @@
     align-items: start;
     grid-auto-rows: minmax(200px, auto);
 }
+
 .imgcard_place {
-    display: grid;
-    width: 100%;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center; /* Центрирование элементов */
     gap: 1rem;
-    align-items: start;
-    grid-auto-rows: minmax(200px, auto);
+    width: 100%;
 }
+
+.imgcard_place > * {
+    flex: 1 1 300px; /* Гибкое поведение: минимальная ширина 300px */
+    max-width: 100%; /* Чтобы не выходило за пределы */
+}
+
 .imgcard_place figure {
     display: flex;
     flex-direction: column;
