@@ -16,7 +16,7 @@ export default function HeadBlock({ item }) {
         <>
             <div className={cl.head_block}>
                 <div
-                    className={cl.cover} // Элемент обложки
+                    className={cl.cover}
                     style={{
                         backgroundImage: `url('${item.img}')`,
                     }}

@@ -1,11 +1,11 @@
-import cl from "./pain.module.css";
+import cl from "../services.module.css";
 
 export default function Pain({ pains, title }) {
     return (
-        <section className={cl.section}>
-            <h2 className={cl.title}>{title}</h2>
+        <section className='section'>
+            <h2 className='title2'>{title}</h2>
             <div
-                className={cl.pains}
+                className={cl.imgcard_place}
                 dangerouslySetInnerHTML={{ __html: pains }}
             />
         </section>

@@ -87,4 +87,7 @@
     .line {
         display: none;
     }
+    .bottom_line {
+        gap: 1rem;
+    }
 }

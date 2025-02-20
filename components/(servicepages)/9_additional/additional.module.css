@@ -1,17 +1,4 @@
-.section {
-    width: 100vw;
-    padding: 1rem 0;
-    opacity: 100%;
-    margin: 0 -1rem;
-    z-index: 2;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-around;
-    align-self: center;
-    gap: 1rem;
-    padding: 1rem;
-    line-height: 1.5;
-}
+
 .actions {
     display: flex;
     flex-direction: column;

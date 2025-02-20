@@ -1,0 +1,68 @@
+.card_place {
+    display: grid;
+    width: 100%;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 1rem;
+    align-items: start;
+    grid-auto-rows: minmax(200px, auto);
+}
+.imgcard_place {
+    display: grid;
+    width: 100%;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 1rem;
+    align-items: start;
+    grid-auto-rows: minmax(200px, auto);
+}
+.imgcard_place figure {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    margin: 0;
+    box-sizing: border-box;
+    padding: 0.5rem;
+    box-shadow: var(--boxshadow);
+    border-radius: 0.5rem;
+    background-color: var(--foreground);
+}
+
+.imgcard_place img {
+    width: 100%;
+    aspect-ratio: 3 / 2;
+    object-fit: cover;
+    border-radius: 0.25rem;
+}
+
+.imgcard_place figcaption {
+    text-align: center;
+    padding: 0.5rem;
+    width: 100%; /* Подпись занимает всю ширину фигуры */
+    box-sizing: border-box; /* Учитываем отступы */
+}
+
+.imgcard_place div {
+    max-width: 400px;
+    height: 100%;
+    display: flex;
+    gap: 1rem;
+    position: relative;
+}
+
+.imgcard_place p {
+    position: absolute;
+    top: 1px;
+    left: 1px;
+    width: 2rem;
+    height: 2rem;
+    background-color: var(--foreground);
+    border-radius: 0.5rem 0 0.25rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.imgcard_place span {
+    font-weight: normal;
+}

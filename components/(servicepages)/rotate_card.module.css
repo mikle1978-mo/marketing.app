@@ -1,22 +1,4 @@
-.section {
-    width: 100%;
-    padding: 1rem 0;
-    background-color: var(--foreground);
-    display: flex;
-    flex-direction: column;
-    gap: 2rem;
-    text-align: center;
-}
-
-.mistakes {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 1rem;
-    align-items: start;
-    grid-auto-rows: minmax(200px, auto);
-}
-
-.card {
+.card_rotate {
     position: relative;
     width: 100%;
     height: 100%;
@@ -30,7 +12,7 @@
     position: absolute;
     top: 0;
     left: 0;
-    backface-visibility: hidden; /* Скрыть обратную сторону */
+    backface-visibility: hidden;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -38,29 +20,29 @@
     box-shadow: var(--boxshadow);
     background: var(--foreground);
     padding: 0.5rem;
-    transition: transform 0.6s ease-in-out; /* Плавный переход */
+    transition: transform 0.6s ease-in-out;
 }
 
 .card_front {
-    transform: rotateY(0deg); /* Передняя сторона */
+    transform: rotateY(0deg);
 }
 
 .card_back {
-    transform: rotateY(180deg); /* Обратная сторона */
+    transform: rotateY(180deg);
 }
 
-.card:hover .card_front {
-    transform: rotateY(-180deg); /* Вращение передней стороны при hover */
+.card_rotate:hover .card_front {
+    transform: rotateY(-180deg);
 }
 
-.card:hover .card_back {
-    transform: rotateY(0deg); /* Вращение обратной стороны при hover */
+.card_rotate:hover .card_back {
+    transform: rotateY(0deg);
 }
 
 .card_inner {
     width: 100%;
     height: 100%;
-    transform-style: preserve-3d; /* Сохранение 3D-эффекта */
+    transform-style: preserve-3d;
     position: relative;
     background-color: var(--primary);
     display: flex;
@@ -71,7 +53,6 @@
 .icon {
     width: 2rem;
     height: 2rem;
-    color: var(--secondary-1);
     position: absolute;
     top: 1rem;
     left: 50%;
@@ -97,4 +78,20 @@
 .title {
     text-align: center;
     margin: auto;
+}
+
+.number {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    width: 2rem;
+    height: 2rem;
+    padding: 0.5rem;
+    border-radius: 50%;
+    background-color: var(--secondary-2);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transform: translate(-50%, 50%);
+    color: var(--foreground);
 }

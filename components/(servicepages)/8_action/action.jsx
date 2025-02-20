@@ -13,7 +13,7 @@ export default function Action({ actions, title, form_title }) {
     };
 
     return (
-        <section className={cl.section}>
+        <section className='section'>
             <div className={cl.actions}>
                 <div className={cl.top}>
                     <h2 className={cl.title}>{title}</h2>

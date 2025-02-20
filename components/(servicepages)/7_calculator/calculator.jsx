@@ -56,7 +56,7 @@ const Calculator = ({ works, title, desc }) => {
     }, [services, campaignCount]); // Зависимость от services и campaignCount
 
     return (
-        <section className={cl.section}>
+        <section className='section'>
             <h2>{title}</h2>
             <span
                 className={cl.content}
