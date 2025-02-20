@@ -20,6 +20,7 @@
     align-items: center;
     justify-content: center;
     width: 100%;
+    min-width: 0;
     margin: 0;
     box-sizing: border-box;
     padding: 0.5rem;
@@ -30,6 +31,7 @@
 
 .imgcard_place img {
     width: 100%;
+    max-width: 100%;
     aspect-ratio: 3 / 2;
     object-fit: cover;
     border-radius: 0.25rem;
