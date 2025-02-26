@@ -13,35 +13,41 @@ export default function HeadBlock({ item }) {
     };
 
     return (
-        <>
-            <div className={cl.head_block}>
-                <div
-                    className={cl.cover}
-                    style={{
-                        backgroundImage: `url('${item.img}')`,
-                    }}
-                />
-                <div className={cl.head_block_title}>
-                    <div className={cl.subtitle}>{item?.subtitle}</div>
-                    <h1 className={`${cl.title} ${cl.highlight}`}>
-                        {item?.title}
-                    </h1>
-                    {item?.subtitle2 && typeof item.subtitle2 === "string" && (
-                        <div
-                            className={cl.subtitle2}
-                            dangerouslySetInnerHTML={{ __html: item.subtitle2 }}
+        <section>
+            <div
+                className={cl.cover}
+                style={{
+                    backgroundImage: `url('${item.img}')`,
+                }}
+            />
+            <div className='container'>
+                <div className={cl.head_block}>
+                    <div className={cl.head_block_title}>
+                        <div className={cl.subtitle}>{item?.subtitle}</div>
+                        <h1 className={`${cl.title} ${cl.highlight}`}>
+                            {item?.title}
+                        </h1>
+                        {item?.subtitle2 &&
+                            typeof item.subtitle2 === "string" && (
+                                <div
+                                    className={cl.subtitle2}
+                                    dangerouslySetInnerHTML={{
+                                        __html: item.subtitle2,
+                                    }}
+                                />
+                            )}
+                        <div className={cl.price}>от {item.price}$</div>
+                    </div>
+                    <div className={cl.form_wrapper}>
+                        <Form
+                            onSuccess={handleSuccess}
+                            title={
+                                item?.top_form_title ||
+                                "Получить обратный звонок"
+                            }
+                            button={"Заказать"}
                         />
-                    )}
-                    <div className={cl.price}>от {item.price}$</div>
-                </div>
-                <div className={cl.form_wrapper}>
-                    <Form
-                        onSuccess={handleSuccess}
-                        title={
-                            item?.top_form_title || "Получить обратный звонок"
-                        }
-                        button={"Заказать"}
-                    />
+                    </div>
                 </div>
             </div>
             <MyModal isOpen={isOpen} toggleOpen={toggleOpen}>
@@ -51,6 +57,6 @@ export default function HeadBlock({ item }) {
                     button={"Отправить"}
                 />
             </MyModal>
-        </>
+        </section>
     );
 }

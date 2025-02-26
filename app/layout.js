@@ -108,7 +108,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
                 {/* End Google Tag Manager (noscript) */}
                 <Header />
                 <WhatsApp />
-                <div className='container'>{children}</div>
+                <main>{children}</main>
                 <Footer />
             </body>
         </html>

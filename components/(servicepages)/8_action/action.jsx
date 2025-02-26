@@ -13,18 +13,20 @@ export default function Action({ actions, title, form_title }) {
     };
 
     return (
-        <section className='section'>
-            <div className={cl.actions}>
-                <div className={cl.top}>
-                    <h2 className={cl.title}>{title}</h2>
-                    <div className={cl.description}>{actions}</div>
-                </div>
-                <div className={cl.form_wrapper}>
-                    <Form
-                        onSuccess={handleSuccess}
-                        title={form_title || "Получить обратный звонок"}
-                        button={"Заказать"}
-                    />
+        <section>
+            <div className='container'>
+                <div className={cl.actions}>
+                    <div className={cl.top}>
+                        <h2 className={cl.title}>{title}</h2>
+                        <div className={cl.description}>{actions}</div>
+                    </div>
+                    <div className={cl.form_wrapper}>
+                        <Form
+                            onSuccess={handleSuccess}
+                            title={form_title || "Получить обратный звонок"}
+                            button={"Заказать"}
+                        />
+                    </div>
                 </div>
             </div>
             <MyModal isOpen={isOpen} toggleOpen={toggleOpen}>

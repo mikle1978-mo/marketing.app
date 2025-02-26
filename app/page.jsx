@@ -32,19 +32,19 @@ export default function Home() {
         },
     ];
     return (
-        <>
+        <div className='container'>
             <Script
                 id='json-ld'
                 type='application/ld+json'
                 dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
             />
-            <main className={cl.main}>
-                <div className={cl.title}>
-                    <h1>Цифровой маркетинг для бизнеса</h1>
-                    <p>- всё, что нужно для интернет продвижения</p>
-                </div>
+            <div className={cl.title_wrapper}>
+                <h1>Цифровой маркетинг для бизнеса</h1>
+                <p>- всё, что нужно для интернет продвижения</p>
+            </div>
+            <section>
                 <MainList />
-            </main>
-        </>
+            </section>
+        </div>
     );
 }

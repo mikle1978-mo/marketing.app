@@ -1,14 +1,3 @@
-.footer {
-    width: 100%;
-    padding: 1rem 0;
-    background-color: var(--foreground);
-    display: flex;
-    flex-direction: column;
-    gap: 2rem;
-    text-align: center;
-    box-shadow: var(--boxshadow);
-}
-
 .contacts {
     display: flex;
     flex-wrap: nowrap;
@@ -23,7 +12,6 @@
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     gap: 2rem;
-    padding: 0 1rem;
     grid-auto-rows: minmax(160px, auto);
 }
 

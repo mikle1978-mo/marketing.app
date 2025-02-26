@@ -21,13 +21,15 @@ const Header = () => {
     };
     return (
         <header className={cl.header}>
-            <div className={cl.line}>
-                <Logo />
-                <div className={cl.contacts}>
-                    <Social />
-                    <MyButton onClick={toggleOpen}>Заказать</MyButton>
+            <div className='container'>
+                <div className={cl.line}>
+                    <Logo />
+                    <div className={cl.contacts}>
+                        <Social />
+                        <MyButton onClick={toggleOpen}>Заказать</MyButton>
+                    </div>
+                    <Burger toggleNav={toggleNav} isNavOpen={isNavOpen} />
                 </div>
-                <Burger toggleNav={toggleNav} isNavOpen={isNavOpen} />
             </div>
             <MyModal isOpen={isOpen} toggleOpen={toggleOpen}>
                 <Form

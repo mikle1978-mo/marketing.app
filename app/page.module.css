@@ -1,14 +1,7 @@
-.main h1 {
-    margin: 0;
-    padding: 0;
-}
-.main p {
-    text-align: center;
-    margin: 0;
-    padding: 0;
-    padding: 0.5rem;
-}
-
-.title {
-    padding: 0.5rem 0;
+.title_wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: calc(var(--small) * 2) 0 var(--small) 0;
+    gap: var(--small);
 }

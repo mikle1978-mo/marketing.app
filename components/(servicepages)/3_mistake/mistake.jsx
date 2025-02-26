@@ -19,12 +19,14 @@ export default function Mistake({ mistakes, title }) {
         </svg>
     );
     return (
-        <section className='section'>
-            <h2 className='title2'>{title}</h2>
-            <div className={cl.card_place}>
-                {mistakes.map((mistake, index) => (
-                    <RotateCard key={index} {...mistake} img={img} />
-                ))}
+        <section>
+            <div className='container'>
+                <h2 className='title2'>{title}</h2>
+                <div className={cl.card_place}>
+                    {mistakes.map((mistake, index) => (
+                        <RotateCard key={index} {...mistake} img={img} />
+                    ))}
+                </div>
             </div>
         </section>
     );

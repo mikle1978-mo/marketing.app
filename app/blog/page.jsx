@@ -12,11 +12,13 @@ export const metadata = {
 
 export default function Blog() {
     return (
-        <>
-            <section className={cl.blog}>
-                <h1>Полезные статьи о рекламе и не только</h1>
-                <ArticlesListComponent />
-            </section>
-        </>
+        <section>
+            <div className='container'>
+                <div className={cl.blog}>
+                    <h1>Полезные статьи о рекламе и не только</h1>
+                    <ArticlesListComponent />
+                </div>
+            </div>
+        </section>
     );
 }

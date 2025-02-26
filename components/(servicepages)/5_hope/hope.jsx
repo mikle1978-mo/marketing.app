@@ -19,12 +19,14 @@ export default function Hope({ hopes, title }) {
         </svg>
     );
     return (
-        <section className='section'>
-            <h2 className='title2'>{title}</h2>
-            <div className={cl.card_place}>
-                {hopes.map((hope, index) => (
-                    <RotateCard key={index} {...hope} img={img} />
-                ))}
+        <section>
+            <div className='container'>
+                <h2>{title}</h2>
+                <div className={cl.card_place}>
+                    {hopes.map((hope, index) => (
+                        <RotateCard key={index} {...hope} img={img} />
+                    ))}
+                </div>
             </div>
         </section>
     );

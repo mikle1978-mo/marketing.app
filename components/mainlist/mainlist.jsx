@@ -4,10 +4,10 @@ import { ServicesList } from "@/lib/services";
 
 export default function MainList() {
     return (
-        <section className={cl.mainList}>
+        <div className={cl.mainList}>
             {ServicesList.map((item) => (
                 <Main_item item={item} key={item.id} />
             ))}
-        </section>
+        </div>
     );
 }

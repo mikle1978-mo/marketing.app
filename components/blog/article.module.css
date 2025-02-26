@@ -1,26 +1,23 @@
 .article {
-    padding: 0.5rem;
     margin: 1rem auto;
     max-width: 900px;
     width: 100%;
     border-radius: 8px;
-    box-shadow: var(--boxshadow);
 }
 
 .header {
+    display: flex;
+    flex-direction: column;
+    gap: var(--small);
     text-align: center;
-    margin-bottom: 1.5rem;
 }
 
 .title {
     font-size: 1.5rem;
-    margin-bottom: 0.5rem;
 }
 
 .subtitle {
     font-size: 1.2rem;
-
-    margin-bottom: 0.8rem;
 }
 
 .date {
@@ -77,30 +74,30 @@
 }
 
 .content article > a {
-    color: var(--secondary-2) !important; /* Основной цвет ссылки */
-    cursor: pointer; /* Вид курсора */
-    text-decoration: underline !important; /* Подчеркивание */
-    font-weight: bold; /* Дополнительно: можно добавить жирный шрифт */
-    transition: color 0.3s ease; /* Плавный переход цвета при наведении */
+    color: var(--secondary-2) !important;
+    cursor: pointer;
+    text-decoration: underline !important;
+    font-weight: bold;
+    transition: color 0.3s ease;
 }
 
 .content article > a:hover {
-    color: var(--primary); /* Изменение цвета при наведении */
-    text-decoration: none; /* Убирает подчеркивание при наведении */
+    color: var(--primary);
+    text-decoration: none;
 }
 
 .goback {
-    display: block; /* или block, если нужно, чтобы элемент занимал всю ширину */
+    display: block;
     text-align: center;
     color: var(--secondary-2);
     margin: 1rem auto;
-    padding: 0.5rem; /* Добавляем отступы */
+    padding: 0.5rem;
     cursor: pointer;
 }
 
 @media (max-width: 768px) {
     .title {
-        font-size: 1.8rem;
+        font-size: 1.3rem;
     }
 
     .subtitle {

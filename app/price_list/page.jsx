@@ -14,7 +14,7 @@ export const metadata = {
 
 export default function PriceList() {
     return (
-        <>
+        <div className='container'>
             <h1 className={cl.title}>Цены на услуги</h1>
             <table className={cl.table}>
                 <thead className={cl.table_head}>
@@ -72,6 +72,6 @@ export default function PriceList() {
                     ))}
                 </tbody>
             </table>
-        </>
+        </div>
     );
 }

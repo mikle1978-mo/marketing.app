@@ -75,41 +75,34 @@ export default async function ServicePage({ params }) {
                 type='application/ld+json'
                 dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
             />
-            <main className={cl.main}>
-                <Scroll line={item?.line} />
-                <HeadBlock item={item} />
-                <Problem
-                    problems={item?.problems}
-                    title={item?.problem_title}
+
+            <HeadBlock item={item} />
+            <Scroll line={item?.line} />
+            <Problem problems={item?.problems} title={item?.problem_title} />
+            <Mistake mistakes={item?.mistakes} title={item?.mistake_title} />
+            <Pain pains={item?.pains} title={item?.pain_title} />
+            <Hope hopes={item?.hopes} title={item?.hope_title} />
+            <Solution
+                solutions={item?.solutions}
+                title={item?.solution_title}
+            />
+            {item?.works.length > 0 && (
+                <Calculator
+                    works={item?.works}
+                    title={item?.works_title}
+                    desc={item?.works_desc}
                 />
-                <Mistake
-                    mistakes={item?.mistakes}
-                    title={item?.mistake_title}
-                />
-                <Pain pains={item?.pains} title={item?.pain_title} />
-                <Hope hopes={item?.hopes} title={item?.hope_title} />
-                <Solution
-                    solutions={item?.solutions}
-                    title={item?.solution_title}
-                />
-                {item?.works.length > 0 && (
-                    <Calculator
-                        works={item?.works}
-                        title={item?.works_title}
-                        desc={item?.works_desc}
-                    />
-                )}
-                <Action
-                    actions={item?.actions}
-                    title={item?.action_title}
-                    form_title={item.bottom_form_title}
-                />
-                <Additional
-                    additionals={additionals}
-                    title={"Вам также может понадобиться"}
-                />
-                <Scroll line={item?.line} />
-            </main>
+            )}
+            <Action
+                actions={item?.actions}
+                title={item?.action_title}
+                form_title={item.top_form_title}
+            />
+            <Additional
+                additionals={additionals}
+                title={"Вам также может понадобиться"}
+            />
+            <Scroll line={item?.line} />
         </>
     );
 }
