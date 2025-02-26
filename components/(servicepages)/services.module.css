@@ -4,6 +4,7 @@
     grid-template-columns: repeat(auto-fill, 340px);
     gap: var(--small);
     align-items: stretch;
+    justify-content: center;
 }
 .imgcard_place {
     width: 100%;
@@ -12,6 +13,7 @@
     grid-auto-rows: minmax(200px, auto);
     gap: var(--small);
     align-items: stretch;
+    justify-content: center;
 }
 
 /* .imgcard_place {

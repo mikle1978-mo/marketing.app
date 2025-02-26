@@ -8,10 +8,9 @@
 .mainList {
     width: 100%;
     display: grid;
-    grid-template-columns: repeat(
-        auto-fit,
-        minmax(300px, 1fr)
-    ); /* Карточки от 300px до равномерного распределения */
-    gap: 1rem; /* Промежуток между карточками */
-    justify-content: center; /* Выравнивание карточек по центру */
+    grid-template-columns: repeat(auto-fill, 340px);
+    grid-auto-rows: minmax(200px, auto);
+    gap: var(--small);
+    align-items: stretch;
+    justify-content: center;
 }
