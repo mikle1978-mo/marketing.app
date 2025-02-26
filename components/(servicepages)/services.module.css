@@ -2,6 +2,7 @@
     width: 100%;
     display: grid;
     grid-template-columns: repeat(auto-fill, 340px);
+    grid-auto-rows: minmax(200px, auto);
     gap: var(--small);
     align-items: stretch;
     justify-content: center;
