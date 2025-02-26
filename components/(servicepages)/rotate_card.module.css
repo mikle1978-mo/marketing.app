@@ -1,6 +1,8 @@
 .card_rotate {
+    display: block;
     position: relative;
     width: 340px;
+    height: 226px;
     aspect-ratio: 3/2;
     perspective: 1000px;
 }
@@ -8,6 +10,7 @@
 .card_front,
 .card_back {
     width: 340px;
+    height: 226px;
     aspect-ratio: 3/2;
     position: absolute;
     top: 0;
