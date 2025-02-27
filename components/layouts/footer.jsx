@@ -117,7 +117,6 @@ export default function Footer() {
                     </div>
                     <div className={cl.card}>
                         <div className={cl.icons_wrapper}>
-                            {/* <FontAwesomeIcon className={cl.icons} icon={faClock} /> */}
                             <svg
                                 aria-hidden='true'
                                 data-icon='clock'

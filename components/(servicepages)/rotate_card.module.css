@@ -97,5 +97,5 @@
     justify-content: center;
     align-items: center;
     transform: translate(-50%, 50%);
-    color: var(--foreground);
+    color: #ffffff;
 }
