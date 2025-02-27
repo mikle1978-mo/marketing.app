@@ -29,7 +29,7 @@
 .img2 {
     width: 2rem;
     height: 2rem;
-    background-color: var(--foreground);
+    background-color: var(--background);
 }
 
 .img3 {
@@ -40,7 +40,7 @@
 .img4 {
     width: 1rem;
     height: 1rem;
-    background-color: var(--foreground);
+    background-color: var(--background);
 }
 .img5 {
     width: 0.5rem;
@@ -50,7 +50,7 @@
 .logo:hover .img,
 .logo:hover .img3,
 .logo:hover .img5 {
-    background-color: var(--background);
+    background-color: var(--foreground);
 }
 
 @media (max-width: 570px) {

@@ -17,7 +17,7 @@ export default function Action({ actions, title, form_title }) {
             <div className='container'>
                 <div className={cl.actions}>
                     <div className={cl.top}>
-                        <h2 className={cl.title}>{title}</h2>
+                        <h2 className='title2'>{title}</h2>
                         <div className={cl.description}>{actions}</div>
                     </div>
                     <div className={cl.form_wrapper}>

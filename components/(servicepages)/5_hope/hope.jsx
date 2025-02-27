@@ -21,7 +21,7 @@ export default function Hope({ hopes, title }) {
     return (
         <section>
             <div className='container'>
-                <h2>{title}</h2>
+                <h2 className='title2'>{title}</h2>
                 <div className={cl.card_place}>
                     {hopes.map((hope, index) => (
                         <RotateCard key={index} {...hope} img={img} />

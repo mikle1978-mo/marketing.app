@@ -5,7 +5,7 @@ export default function Pain({ pains, title }) {
     return (
         <section>
             <div className='container'>
-                <h2>{title}</h2>
+                <h2 className='title2'>{title}</h2>
                 <div className={cl.imgcard_place}>
                     {pains.map((pain, index) => (
                         <ImgCard key={index} item={pain} />

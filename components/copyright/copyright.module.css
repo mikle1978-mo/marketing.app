@@ -1,4 +1,6 @@
 .copyright {
     align-self: center;
     font-size: 0.9rem;
+    text-align: center;
+    padding: var(--small) 0;
 }

@@ -62,7 +62,7 @@
     display: block;
     font-weight: bolder;
     font-size: var(--large);
-    color: var(--foreground);
+    color: #ffffff;
     background-color: var(--secondary-0);
     text-align: center;
     padding: 0 var(--small);

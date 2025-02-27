@@ -41,12 +41,12 @@
 .textarea_wrapper textarea {
     width: 100%;
     padding: 0.5rem;
-    border: 1px solid #ddd;
+    border: none;
     border-radius: 0.25rem;
     font-size: 1rem;
-    background-color: #fff;
     box-shadow: var(--boxshadow);
     transition: border-color 0.3s, box-shadow 0.3s;
+    background-color: var(--background);
 }
 
 /* Анимация при фокусе */
