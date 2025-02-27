@@ -21,7 +21,7 @@
     align-items: center;
     border-radius: 0.5rem;
     box-shadow: var(--boxshadow);
-    background: var(--foreground);
+    background: var(--background);
     padding: 0.5rem;
     transition: transform 0.6s ease-in-out;
 }

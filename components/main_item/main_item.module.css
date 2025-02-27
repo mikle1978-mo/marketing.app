@@ -5,7 +5,7 @@
     width: 340px;
     border-radius: var(--smallest);
     transition: all 0.3s;
-    background-color: var(--foreground);
+    background-color: var(--background);
     text-align: justify;
     overflow: hidden;
     cursor: pointer;

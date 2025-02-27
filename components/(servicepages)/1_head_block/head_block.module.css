@@ -35,7 +35,7 @@
     width: 80%;
     text-align: center;
     text-transform: uppercase;
-    background-color: var(--foreground);
+    background-color: var(--background);
     transform: rotate(5deg);
     padding: var(--medium);
 }
@@ -62,7 +62,7 @@
     display: block;
     font-weight: bolder;
     font-size: var(--large);
-    color: var(--background);
+    color: var(--foreground);
     background-color: var(--secondary-0);
     text-align: center;
     padding: 0 var(--small);

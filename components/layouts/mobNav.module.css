@@ -29,7 +29,7 @@
         right: -100%;
         width: 80%;
         height: 100%;
-        background-color: var(--foreground);
+        background-color: var(--background);
         display: flex;
         flex-direction: column;
         justify-content: flex-start;
@@ -131,6 +131,6 @@
         margin: 0;
     }
     .submenuButton:focus {
-        outline: none; /* Для того чтобы убрать стандартное оформление при фокусе, можно добавить свой стиль */
+        outline: none;
     }
 }

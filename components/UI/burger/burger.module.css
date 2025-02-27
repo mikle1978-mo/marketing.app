@@ -4,7 +4,7 @@
     height: 4px;
     width: 30px;
     top: 13px;
-    background-color: var(--background);
+    background-color: var(--foreground);
     border-radius: 20px;
     position: absolute;
     transition-duration: 0.3s;
@@ -16,7 +16,7 @@
     top: -9px;
     height: 4px;
     width: 30px;
-    background-color: var(--background);
+    background-color: var(--foreground);
     content: "";
     border-radius: 20px;
     transition-duration: 0.3s;
@@ -27,7 +27,7 @@
     top: 9px;
     height: 4px;
     width: 30px;
-    background-color: var(--background);
+    background-color: var(--foreground);
     content: "";
     border-radius: 20px;
     transition-duration: 0.3s;

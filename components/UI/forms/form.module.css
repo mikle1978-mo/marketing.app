@@ -10,7 +10,7 @@
     width: 100%;
     margin: 0 auto;
     gap: 1rem;
-    background-color: var(--foreground);
+    background-color: var(--background);
     border-radius: 0.5rem;
     box-shadow: var(--boxshadow);
     height: auto;

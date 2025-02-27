@@ -5,7 +5,7 @@
     width: 340px;
     border-radius: var(--smallest);
     transition: all 0.3s;
-    background-color: var(--foreground);
+    background-color: var(--background);
     text-align: justify;
     overflow: hidden;
     cursor: pointer;
@@ -55,7 +55,7 @@
     left: 1px;
     width: 2rem;
     height: 2rem;
-    background-color: var(--foreground);
+    background-color: var(--background);
     border-radius: 0.5rem 0 0.25rem;
     display: flex;
     align-items: center;

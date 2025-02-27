@@ -1,6 +1,6 @@
 :root {
-    --foreground: #ffffff;
-    --background: #33363a;
+    --background: #ffffff;
+    --foreground: #33363a;
 
     --primary: #f2f2f2;
 
@@ -19,9 +19,9 @@
     --header-height: 4rem;
 
     --border: 1px solid var(--foreground);
-    --boxshadow: inset 0 0 2px var(--background);
-    --text-shadow: 0px 0px 1px var(--background), 1px 1px 2px var(--background),
-        2px 2px 3px var(--background);
+    --boxshadow: inset 0 0 2px var(--foreground);
+    --text-shadow: 0px 0px 1px var(--foreground), 1px 1px 2px var(--foreground),
+        2px 2px 3px var(--foreground);
 }
 
 * {
@@ -37,7 +37,8 @@ body {
     flex-direction: column;
     overflow-x: hidden;
     font-size: 16px;
-    background-color: transparent;
+    background-color: var(--background);
+    color: var(--foreground);
     font-family: Helvetica, sans-serif;
 }
 
@@ -68,18 +69,18 @@ header {
     width: 100%;
     height: var(--header-height);
     align-items: center;
-    background-color: var(--foreground);
+    background-color: var(--background);
     box-shadow: var(--boxshadow);
 }
 main {
     margin-bottom: var(--small);
     padding-top: calc(var(--header-height));
-    background-color: var(--foreground);
+    background-color: var(--background);
     width: 100%;
 }
 section {
     position: relative;
-    background-color: var(--foreground);
+    background-color: var(--background);
     width: 100%;
     opacity: 100%;
     display: flex;
@@ -95,7 +96,7 @@ footer {
     margin-top: var(--small);
     padding-top: var(--small);
     width: 100%;
-    background-color: var(--foreground);
+    background-color: var(--background);
     box-shadow: var(--boxshadow);
 }
 .container {
@@ -167,20 +168,17 @@ td {
 }
 
 @media (prefers-color-scheme: dark) {
-    html {
+    :root {
+        --foreground: #ffffff;
+        --background: #33363a;
+
+        --primary: #171717;
+    }
+    /* html {
         color-scheme: dark;
         background-color: var(--background);
     }
     body {
         background-color: var(--background);
-    }
-    :root {
-        --background: #ffffff;
-        --foreground: #33363a;
-
-        --primary: #171717;
-    }
-    .container {
-        background-color: var(--background);
-    }
+    } */
 }
