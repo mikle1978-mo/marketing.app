@@ -1,19 +1,18 @@
-.section {
-    width: 100%;
-    padding: 1rem 0;
+.calculator_cover {
+    padding: 0.5rem;
+    margin: auto;
     display: flex;
     flex-direction: column;
-    gap: 2rem;
-    text-align: center;
+    align-items: center;
+    gap: 1rem;
 }
-
 .calculator_container {
     padding: 0.5rem;
     max-width: 400px;
     margin: auto;
     border: 1px solid var(--foreground);
     border-radius: 0.5rem;
-    background-color: var(--foreground);
+    background-color: var(--background);
     display: flex;
     flex-direction: column;
     height: 80vh;
