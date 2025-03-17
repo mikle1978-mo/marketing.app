@@ -1,5 +1,4 @@
 import HeadBlock from "@/components/(servicepages)/1_head_block/head_block";
-import cl from "./page.module.css";
 import { ServicesList } from "@/lib/services";
 import Problem from "@/components/(servicepages)/2_problem/problem";
 import Mistake from "@/components/(servicepages)/3_mistake/mistake";
