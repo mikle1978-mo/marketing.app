@@ -230,7 +230,7 @@ export default function Footer() {
                                     </li>
                                     <li>
                                         <a href='https://azimuth-mo.ru'>
-                                            Инвестиционный фонд "Азимут"
+                                            {' Инвестиционный фонд "Азимут"'}
                                         </a>
                                     </li>
                                 </ul>
