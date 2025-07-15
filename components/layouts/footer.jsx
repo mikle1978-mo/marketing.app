@@ -12,23 +12,52 @@ export default function Footer() {
                 <div className={cl.bottom_line}>
                     <div className={cl.card}>
                         <div className={cl.icons_wrapper}>
-                            {/* <FontAwesomeIcon
-                            className={cl.icons}
-                            icon={faFileLines}
-                        /> */}
                             <svg
                                 aria-hidden='true'
+                                data-icon='text-document'
                                 className={cl.icons}
                                 role='img'
+                                width='32'
+                                height='32'
+                                viewBox='0 0 32 32'
+                                fill='none'
                                 xmlns='http://www.w3.org/2000/svg'
-                                viewBox='0 0 384 512'
-                                width='2.5rem'
-                                height='2.5rem'
                             >
                                 <path
-                                    fill='currentColor'
-                                    d='M64 0C28.7 0 0 28.7 0 64L0 448c0 35.3 28.7 64 64 64l256 0c35.3 0 64-28.7 64-64l0-288-128 0c-17.7 0-32-14.3-32-32L224 0 64 0zM256 0l0 128 128 0L256 0zM112 256l160 0c8.8 0 16 7.2 16 16s-7.2 16-16 16l-160 0c-8.8 0-16-7.2-16-16s7.2-16 16-16zm0 64l160 0c8.8 0 16 7.2 16 16s-7.2 16-16 16l-160 0c-8.8 0-16-7.2-16-16s7.2-16 16-16zm0 64l160 0c8.8 0 16 7.2 16 16s-7.2 16-16 16l-160 0c-8.8 0-16-7.2-16-16s7.2-16 16-16z'
-                                ></path>
+                                    d='M18.6667 2.66663H8.00004C7.2928 2.66663 6.61452 2.94758 6.11442 3.44767C5.61433 3.94777 5.33337 4.62605 5.33337 5.33329V26.6666C5.33337 27.3739 5.61433 28.0521 6.11442 28.5522C6.61452 29.0523 7.2928 29.3333 8.00004 29.3333H24C24.7073 29.3333 25.3856 29.0523 25.8857 28.5522C26.3858 28.0521 26.6667 27.3739 26.6667 26.6666V10.6666L18.6667 2.66663Z'
+                                    stroke='currentColor'
+                                    strokeWidth='3'
+                                    strokeLinecap='round'
+                                    strokeLinejoin='round'
+                                />
+                                <path
+                                    d='M18.6666 2.66663V10.6666H26.6666'
+                                    stroke='currentColor'
+                                    strokeWidth='3'
+                                    strokeLinecap='round'
+                                    strokeLinejoin='round'
+                                />
+                                <path
+                                    d='M21.3333 17.3334H10.6666'
+                                    stroke='currentColor'
+                                    strokeWidth='3'
+                                    strokeLinecap='round'
+                                    strokeLinejoin='round'
+                                />
+                                <path
+                                    d='M21.3333 22.6666H10.6666'
+                                    stroke='currentColor'
+                                    strokeWidth='3'
+                                    strokeLinecap='round'
+                                    strokeLinejoin='round'
+                                />
+                                <path
+                                    d='M13.3333 12H12H10.6666'
+                                    stroke='currentColor'
+                                    strokeWidth='3'
+                                    strokeLinecap='round'
+                                    strokeLinejoin='round'
+                                />
                             </svg>
                         </div>
                         <div className={cl.front}>
@@ -68,24 +97,31 @@ export default function Footer() {
                     </div>
                     <div className={cl.card}>
                         <div className={cl.icons_wrapper}>
-                            {/* <FontAwesomeIcon
-                            className={cl.icons}
-                            icon={faAddressBook}
-                        /> */}
                             <svg
                                 aria-hidden='true'
-                                data-icon='address-book'
+                                data-icon='mail'
                                 className={cl.icons}
                                 role='img'
+                                width='33'
+                                height='32'
+                                viewBox='0 0 33 32'
+                                fill='white'
                                 xmlns='http://www.w3.org/2000/svg'
-                                viewBox='0 0 512 512'
-                                width='2.5rem'
-                                height='2.5rem'
                             >
                                 <path
-                                    fill='currentColor'
-                                    d='M96 0C60.7 0 32 28.7 32 64l0 384c0 35.3 28.7 64 64 64l288 0c35.3 0 64-28.7 64-64l0-384c0-35.3-28.7-64-64-64L96 0zM208 288l64 0c44.2 0 80 35.8 80 80c0 8.8-7.2 16-16 16l-192 0c-8.8 0-16-7.2-16-16c0-44.2 35.8-80 80-80zm-32-96a64 64 0 1 1 128 0 64 64 0 1 1 -128 0zM512 80c0-8.8-7.2-16-16-16s-16 7.2-16 16l0 64c0 8.8 7.2 16 16 16s16-7.2 16-16l0-64zM496 192c-8.8 0-16 7.2-16 16l0 64c0 8.8 7.2 16 16 16s16-7.2 16-16l0-64c0-8.8-7.2-16-16-16zm16 144c0-8.8-7.2-16-16-16s-16 7.2-16 16l0 64c0 8.8 7.2 16 16 16s16-7.2 16-16l0-64z'
-                                ></path>
+                                    d='M5.79716 5.33337H27.1305C28.5972 5.33337 29.7972 6.53337 29.7972 8.00004V24C29.7972 25.4667 28.5972 26.6667 27.1305 26.6667H5.79716C4.33049 26.6667 3.13049 25.4667 3.13049 24V8.00004C3.13049 6.53337 4.33049 5.33337 5.79716 5.33337Z'
+                                    stroke='currentColor'
+                                    strokeWidth='3'
+                                    strokeLinecap='round'
+                                    strokeLinejoin='round'
+                                />
+                                <path
+                                    d='M29.7972 8L16.4638 17.3333L3.13049 8'
+                                    stroke='currentColor'
+                                    strokeWidth='3'
+                                    strokeLinecap='round'
+                                    strokeLinejoin='round'
+                                />
                             </svg>
                         </div>
                         <div className={cl.front}>
@@ -122,15 +158,26 @@ export default function Footer() {
                                 data-icon='clock'
                                 className={cl.icons}
                                 role='img'
+                                width='33'
+                                height='32'
+                                viewBox='0 0 33 32'
+                                fill='white'
                                 xmlns='http://www.w3.org/2000/svg'
-                                viewBox='0 0 512 512'
-                                width='2.5rem'
-                                height='2.5rem'
                             >
                                 <path
-                                    fill='currentColor'
-                                    d='M256 0a256 256 0 1 1 0 512A256 256 0 1 1 256 0zM232 120l0 136c0 8 4 15.5 10.7 20l96 64c11 7.4 25.9 4.4 33.3-6.7s4.4-25.9-6.7-33.3L280 243.2 280 120c0-13.3-10.7-24-24-24s-24 10.7-24 24z'
-                                ></path>
+                                    d='M16.5417 29.3333C23.9055 29.3333 29.875 23.3638 29.875 16C29.875 8.63616 23.9055 2.66663 16.5417 2.66663C9.17791 2.66663 3.20837 8.63616 3.20837 16C3.20837 23.3638 9.17791 29.3333 16.5417 29.3333Z'
+                                    stroke='currentColor'
+                                    strokeWidth='3'
+                                    strokeLinecap='round'
+                                    strokeLinejoin='round'
+                                />
+                                <path
+                                    d='M16.5417 8V16L21.8751 18.6667'
+                                    stroke='currentColor'
+                                    strokeWidth='3'
+                                    strokeLinecap='round'
+                                    strokeLinejoin='round'
+                                />
                             </svg>
                         </div>
                         <div className={cl.front}>
@@ -145,6 +192,46 @@ export default function Footer() {
                                     </li>
                                     <li>
                                         <p>Вс: 09:00 - 14:00</p>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div className={cl.card}>
+                        <div className={cl.icons_wrapper}>
+                            <svg
+                                aria-hidden='true'
+                                data-icon='thumbs-up'
+                                className={cl.icons}
+                                role='img'
+                                width='33'
+                                height='32'
+                                viewBox='0 0 33 32'
+                                fill='white'
+                                xmlns='http://www.w3.org/2000/svg'
+                            >
+                                <path
+                                    d='M9.87504 14.6666L15.2084 2.66663C16.2692 2.66663 17.2867 3.08805 18.0368 3.8382C18.7869 4.58834 19.2084 5.60576 19.2084 6.66663V12H26.755C27.1416 11.9956 27.5245 12.0753 27.8771 12.2336C28.2298 12.3919 28.5439 12.6249 28.7975 12.9166C29.0512 13.2084 29.2384 13.5517 29.3462 13.923C29.4539 14.2942 29.4797 14.6844 29.4217 15.0666L27.5817 27.0666C27.4853 27.7025 27.1623 28.2821 26.6722 28.6986C26.1822 29.1152 25.5581 29.3406 24.915 29.3333H9.87504M9.87504 14.6666V29.3333M9.87504 14.6666H5.87504C5.1678 14.6666 4.48952 14.9476 3.98942 15.4477C3.48933 15.9478 3.20837 16.626 3.20837 17.3333V26.6666C3.20837 27.3739 3.48933 28.0521 3.98942 28.5522C4.48952 29.0523 5.1678 29.3333 5.87504 29.3333H9.87504'
+                                    stroke='currentColor'
+                                    strokeWidth='3'
+                                    strokeLinecap='round'
+                                    strokeLinejoin='round'
+                                />
+                            </svg>
+                        </div>
+                        <div className={cl.front}>
+                            <div className={cl.wrapper}>
+                                <h3 className={cl.title}>Наши партнеры</h3>
+                                <ul className={cl.bottom_item}>
+                                    <li>
+                                        <a href='https://kemer.app'>
+                                            Kemer.app - Экскурсии в Кемере
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href='https://azimuth-mo.ru'>
+                                            Инвестиционный фонд "Азимут"
+                                        </a>
                                     </li>
                                 </ul>
                             </div>

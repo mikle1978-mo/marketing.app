@@ -38,10 +38,15 @@
     gap: 0.5rem;
     overflow: hidden;
 }
+.bottom_item a {
+    text-decoration: underline;
+}
+.bottom_item a:hover {
+    text-decoration: none;
+}
 
 .title {
     /* text-transform: uppercase; */
-    text-decoration: underline;
     padding-bottom: 0.5rem;
     margin-top: 1rem;
     font-size: 1rem;
