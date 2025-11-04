@@ -94,6 +94,12 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
                 <meta name='yandex-verification' content='aa6d456bdb10af99' />
                 <meta name='yandex-verification' content='bda6adf35ed76225' />
                 {/* End Yandex verification */}
+                {/* Google AdSense */}
+                <script
+                    async
+                    src='https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5449189100205390'
+                    crossorigin='anonymous'
+                ></script>
             </head>
             <body>
                 {/* Google Tag Manager (noscript) */}
