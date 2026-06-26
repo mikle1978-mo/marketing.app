@@ -60,6 +60,11 @@ export default function RootLayout({ children }) {
         <html lang='ru'>
             <head>
                 {/* Add Google Analytics script */}
+                <link
+                    rel='icon'
+                    href='https://marketingstark.app/favicon.ico'
+                    type='image/x-icon'
+                ></link>
                 <script
                     async
                     src='https://www.googletagmanager.com/gtag/js?id=G-N772FVWY5R'
